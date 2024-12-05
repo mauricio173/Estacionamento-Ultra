@@ -89,9 +89,14 @@ btnEnviar.addEventListener("click",  (event) => {
      }
 
      function mostrarResultado(mensagem, valido) {
+       const cadastros = document.querySelector("#cadastros");
+  const texto = cpf.value + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
+  cadastros.innerHTML = `
+  ${texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim()}
+  `;
       /*const resultado = document.getElementById("resultado");*/
       const resultado = document.getElementById("cadastros");
-      resultado.textContent = mensagem;
+      resultado.textContent = mensagem + texto;
       resultado.textContent = mensagem;
       resultado.style.color = valido ? "green" : "red";
      }
