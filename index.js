@@ -92,7 +92,7 @@ btnEnviar.addEventListener("click",  (event) => {
        const cadastros = document.querySelector("#cadastros");
   const texto = cpf.value + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
   cadastros.innerHTML = `
-  ${mensagem} \n
+  ${mensagem} <br>
   ${texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim()}
   `;
       /*const resultado = document.getElementById("resultado");*/
