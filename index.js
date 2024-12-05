@@ -37,20 +37,6 @@ btnEnviar.addEventListener("click",  (event) => {
   // `;
 });
 
-
-    function removerAcentos(texto) {
-      return texto
-        .normalize("NFD") // Decompõe caracteres acentuados
-        .replace(/[\u0300-\u036f]/g, ""); // Remove diacríticos
-       //  .replace(/[^a-zA-Z0-9\s]/g, ""); // Remove caracteres especiais, exceto letras, números e espaços
-    }
-
-    function processarTexto() {
-      const inputTexto = document.getElementById("texto").value;
-      const textoSemAcentos = removerAcentos(inputTexto);
-      document.getElementById("resultado").textContent = `Texto processado: ${textoSemAcentos}`;
-    }
-
 console.log("Data Atual: ", formatarData(hoje));
 console.log("Data Futura (6 meses à frente): ", formatarData(dataFutura));
 
