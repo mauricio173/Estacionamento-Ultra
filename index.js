@@ -3,6 +3,7 @@ const cpf = document.querySelector("#cpf");
 const dataInicio = document.querySelector("#dataInicio");
 const dataFinal = document.querySelector("#dataFinal");
 const cadastrar = document.querySelector("#cadastrar");
+const btnEnviar = document.querySelector("#btnEnviar");
 const hoje = new Date();
 const dataAtual = hoje.getFullYear() + "-" + (hoje.getMonth()+1) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
 
@@ -18,8 +19,13 @@ const formatarData = (data) => {
   return `${ano}-${mes}-${dia}`;
 };
 
+dataInicio.value = dataAtual;
+dataFinal.value = formatarData(dataFutura);
+
+btnEnviar.addEventListener("click",  () => {
+  
+});
+
 console.log("Data Atual: ", formatarData(hoje));
 console.log("Data Futura (6 meses à frente): ", formatarData(dataFutura));
 
-dataInicio.value = dataAtual;
-dataFinal.value = formatarData(dataFutura);
