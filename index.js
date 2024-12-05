@@ -22,9 +22,9 @@ function dataHorario() {
 dataHorario();
 const dataData = dataHorario.data;
 const dataHora = dataHorario.horario;
-
+const hoje = new Date();
 const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timezone: 'UTC' };
-console.log(novaData.toLocaleDateString('pt-BR', opcoes));
+console.log(hoje.toLocaleDateString('pt-BR', opcoes));
 
 console.log(dataData);
 console.log(dataHora);
