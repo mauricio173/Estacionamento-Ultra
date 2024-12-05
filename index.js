@@ -22,7 +22,8 @@ const formatarData = (data) => {
 dataInicio.value = dataAtual;
 dataFinal.value = formatarData(dataFutura);
 
-btnEnviar.addEventListener("click",  () => {
+btnEnviar.addEventListener("click",  (event) => {
+  event.preventDefault();
   cadastrar.innerHTML = `
   ${nome.value.toUpperCase()}
   `;
