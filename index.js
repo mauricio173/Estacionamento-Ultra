@@ -23,5 +23,8 @@ dataHorario();
 const dataData = dataHorario.data;
 const dataHora = dataHorario.horario;
 
+const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timezone: 'UTC' };
+console.log(novaData.toLocaleDateString('pt-BR', opcoes));
+
 console.log(dataData);
 console.log(dataHora);
