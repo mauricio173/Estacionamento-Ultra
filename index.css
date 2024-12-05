@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  --dark: #181818dd;
+  --white: #fdfdfd;
+  --red: #f9004d;
+  --roxo: #986dff;
+  --verde: #a6fc98;
+}
+
+body {
+background: black;
+}
+
+.header {
+
+}
+
+.main {
+
+}
+
+.footer {
+
+}
