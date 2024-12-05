@@ -26,4 +26,4 @@ const hoje = new Date();
 const opcoes = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', timezone: 'UTC' };
 console.log(hoje.toLocaleDateString('pt-BR', opcoes));
 
-console.log(hoje);
+console.log(hoje.getFullYear() + "-" + hoje.getMonth() + "-" + hoje.getDate());
