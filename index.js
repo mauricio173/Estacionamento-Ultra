@@ -25,7 +25,11 @@ dataFinal.value = formatarData(dataFutura);
 btnEnviar.addEventListener("click",  (event) => {
   event.preventDefault();
   const cadastro = document.querySelector("#cadastro");
+  const cadastros = document.querySelector("#cadastros");
   const texto = cpf.value + ";" + nome.value.toUpperCase() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" +  cpf.value;
+  cadastros.innerHTML = `
+  ${texto}
+  `;
   cadastro.innerHTML = `
   ${cpf.value};
   ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value}
