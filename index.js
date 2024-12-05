@@ -23,7 +23,9 @@ dataInicio.value = dataAtual;
 dataFinal.value = formatarData(dataFutura);
 
 btnEnviar.addEventListener("click",  () => {
-  
+  cadastrar.innerHTML = `
+  ${nome.value.toUpperCase()}
+  `;
 });
 
 console.log("Data Atual: ", formatarData(hoje));
