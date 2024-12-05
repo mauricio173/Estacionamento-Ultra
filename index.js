@@ -28,7 +28,7 @@ btnEnviar.addEventListener("click",  (event) => {
   const texto = cpf.value;
   cadastro.innerHTML = `
   ${cpf.value};
-  ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value};${texto}
+  ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value}
   `;
 });
 
