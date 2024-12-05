@@ -4,11 +4,11 @@ const dataInicio = document.querySelector("#dataInicio");
 const dataFinal = document.querySelector("#dataFinal");
 const hoje = new Date();
 const dataAtual = hoje.getFullYear() + "-" + (hoje.getMonth()+1) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
-const dataFutura = hoje.getFullYear() + "-" + (hoje.getMonth()+7) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
+// const dataFutura = hoje.getFullYear() + "-" + (hoje.getMonth()+7) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
 
 // Criar uma nova data baseada na atual
-const dataFuturas = new Date(hoje);
-dataFuturas.setMonth(dataFuturas.getMonth() + 6);
+const dataFutura = new Date(hoje);
+dataFutura.setMonth(dataFutura.getMonth() + 6);
 
 // Formatar as datas no formato "YYYY-MM-DD"
 const formatarData = (data) => {
@@ -19,10 +19,7 @@ const formatarData = (data) => {
 };
 
 console.log("Data Atual: ", formatarData(hoje));
-console.log("Data Futura (6 meses à frente): ", formatarData(dataFuturas));
+console.log("Data Futura (6 meses à frente): ", formatarData(dataFutura));
 
 dataInicio.value = dataAtual;
 dataFinal.value = dataFutura;
-
-console.log(dataAtual);
-console.log(dataFutura);
