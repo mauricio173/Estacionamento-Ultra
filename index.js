@@ -27,7 +27,7 @@ btnEnviar.addEventListener("click",  (event) => {
   const cadastro = document.querySelector("#cadastro");
   cadastro.innerHTML = `
   ${cpf.value};
-  ${nome.value.toUpperCase()};${dataInicio.value};${dataFutura.value};1;${cpf.value}
+  ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value}
   `;
 });
 
