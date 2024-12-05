@@ -24,7 +24,8 @@ dataFinal.value = formatarData(dataFutura);
 
 btnEnviar.addEventListener("click",  (event) => {
   event.preventDefault();
-  cadastrar.innerHTML = `
+  const cadastro = document.querySelector("#cadastro");
+  cadastro.innerHTML = `
   ${nome.value.toUpperCase()}
   `;
 });
