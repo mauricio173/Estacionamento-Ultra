@@ -7,4 +7,3 @@ const dataFinal = document.querySelector("#dataFinal");
 const hoje = new Date();
 const dataAtual = hoje.getFullYear() + "-" + (hoje.getMonth()+1) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
 console.log(dataAtual);
-// console.log(hoje.getFullYear() + "-" + (hoje.getMonth()+1) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate()));
