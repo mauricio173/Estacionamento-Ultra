@@ -19,6 +19,7 @@ function dataHorario() {
   horario: horario
   };
 }
+dataHorario();
 const dataData = dataHorario.data;
 const dataHora = dataHorario.horario;
 
