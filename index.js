@@ -28,7 +28,8 @@ btnEnviar.addEventListener("click",  (event) => {
   const cadastros = document.querySelector("#cadastros");
   const texto = cpf.value + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
   cadastros.innerHTML = `
-  ${texto.trim()}
+  ${texto.normalize("NFD") // Decompõe caracteres acentuados
+        .replace(/[\u0300-\u036f]/g, "").trim()}
   `;
   // cadastro.innerHTML = `
   // ${cpf.value};
