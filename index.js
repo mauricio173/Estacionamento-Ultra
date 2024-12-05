@@ -22,4 +22,4 @@ console.log("Data Atual: ", formatarData(hoje));
 console.log("Data Futura (6 meses à frente): ", formatarData(dataFutura));
 
 dataInicio.value = dataAtual;
-dataFinal.value = dataFutura;
+dataFinal.value = formatarData(dataFutura);
