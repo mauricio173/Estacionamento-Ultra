@@ -9,3 +9,4 @@ dataInicio.value = dataAtual;
 dataFinal.value = dataFutura;
 
 console.log(dataAtual);
+console.log(dataFutura);
