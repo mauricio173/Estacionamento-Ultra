@@ -6,11 +6,12 @@
   --white: #fdfdfd;
   --red: #f9004d;
   --roxo: #986dff;
+  --azulP: #05465d;
   --verde: #a6fc98;
 }
 
 body {
-background: black;
+background: var(--azulP);
 }
 
 .header {
