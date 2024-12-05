@@ -96,8 +96,8 @@ btnEnviar.addEventListener("click",  (event) => {
   `;
       /*const resultado = document.getElementById("resultado");*/
       const resultado = document.getElementById("cadastros");
+      /*resultado.textContent = mensagem;*/
       resultado.textContent = mensagem + texto;
-      resultado.textContent = mensagem;
       resultado.style.color = valido ? "green" : "red";
      }
 
