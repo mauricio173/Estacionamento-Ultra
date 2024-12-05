@@ -30,10 +30,10 @@ btnEnviar.addEventListener("click",  (event) => {
   cadastros.innerHTML = `
   ${texto}
   `;
-  cadastro.innerHTML = `
-  ${cpf.value};
-  ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value}
-  `;
+  // cadastro.innerHTML = `
+  // ${cpf.value};
+  // ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value}
+  // `;
 });
 
 console.log("Data Atual: ", formatarData(hoje));
