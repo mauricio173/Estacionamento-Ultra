@@ -21,7 +21,8 @@ const formatarData = (data) => {
 
 dataInicio.value = dataAtual;
 dataFinal.value = formatarData(dataFutura);
-
+nome.value = "Maurício Marques";
+cpf.value = "12345678900";
 btnEnviar.addEventListener("click",  (event) => {
   event.preventDefault();
   const cadastro = document.querySelector("#cadastro");
