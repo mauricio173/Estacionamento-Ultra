@@ -31,6 +31,7 @@ btnEnviar.addEventListener("click",  (event) => {
   cadastros.innerHTML = `
   ${texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim()}
   `;
+  validarCPF();
   // cadastro.innerHTML = `
   // ${cpf.value};
   // ${nome.value.toUpperCase()};${dataInicio.value};${dataFinal.value};1;${cpf.value}
