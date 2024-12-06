@@ -91,7 +91,8 @@ function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
  const texto = cpf.value + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
  cadastros.innerHTML = `
-  ${mensagem} <br>
+  ${mensagem} 
+  <br/><br/>
   ${texto
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "")
