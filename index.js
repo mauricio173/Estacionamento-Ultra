@@ -89,13 +89,13 @@ function validarDigitosVerificadores(cpf) {
 
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
- const texto = cpf.value + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
+ const texto = cpf.value.replace(/\D/g, "") + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
  cadastros.innerHTML = `
   ${mensagem} 
   <br/><br/>
   ${texto
    .normalize("NFD")
-   .replace(/[\u0300-\u036f]/g, "").replace(/\D/g, "")
+   .replace(/[\u0300-\u036f]/g, "")
    .trim()}
   `;
 
