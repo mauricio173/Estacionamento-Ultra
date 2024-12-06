@@ -112,7 +112,7 @@ hr {
  cursor: pointer;
  background: rgba(0, 255, 13, 0.9);
  color: #fff;
- border-radius: 5px;
+ border-radius: 32px;
  box-shadow:
   0 0 5px rgba(0, 255, 13, 0.9),
   0 0 25px rgba(0, 255, 13, 0.9),
