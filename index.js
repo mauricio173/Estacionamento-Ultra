@@ -105,5 +105,4 @@ function mostrarResultado(mensagem, valido) {
  resultado.style.color = valido ? "green" : "red";
 }
 
-console.log("Data Atual: ", formatarData(hoje));
-console.log("Data Futura (6 meses à frente): ", formatarData(dataFutura));
+
