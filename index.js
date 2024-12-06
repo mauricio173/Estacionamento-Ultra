@@ -97,12 +97,9 @@ function mostrarResultado(mensagem, valido) {
    .replace(/[\u0300-\u036f]/g, "")
    .trim()}
   `;
- /*const resultado = document.getElementById("resultado");*/
+
  const resultado = document.getElementById("cadastros");
- /*resultado.textContent = mensagem;
-      resultado.textContent = mensagem + texto;
-      */
- resultado.style.color = valido ? "green" : "red";
+ cadastros.style.color = valido ? "green" : "red";
 }
 
 
