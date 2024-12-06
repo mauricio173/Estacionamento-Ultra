@@ -33,7 +33,13 @@
         </label>
         <label for="cpf">
          <p>CPF</p>
-         <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF"  maxlength="14"/>
+         <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF"  maxlength="14" list="cpfList"/>
+         <datalist id="cpfList">
+           <option value="021.752.030-85"></option>
+           <option value="02175203085"></option>
+           <option value="12345678900"></option>
+           <option value="12312312312"></option>
+         </datalist>
         </label>
        </div>
 
