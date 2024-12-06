@@ -89,7 +89,7 @@ function validarDigitosVerificadores(cpf) {
 
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
- const texto = cpf.value.replace(/\D/g, "") + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value;
+ const texto = cpf.value.replace(/\D/g, "") + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value.replace(/\D/g, "");
  cadastros.innerHTML = `
   ${mensagem} 
   <br/><br/>
