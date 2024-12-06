@@ -17,6 +17,10 @@ body {
  background: var(--azulP);
 }
 
+p {
+  margin: 0;
+}
+
 .header {
 }
 
