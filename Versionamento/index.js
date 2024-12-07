@@ -187,7 +187,7 @@ todosElementos.forEach((item, index) => {
      todosElementos.forEach((item, index) => {
        
      texArea.innerHTML = `
-     ${item.innerText} <br>
+     ${item} <br>
      `;
      });
      
