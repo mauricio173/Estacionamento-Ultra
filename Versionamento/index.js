@@ -178,6 +178,9 @@ document.querySelector("#cadastros").addEventListener("click", (event) => {
     const textoCompleto = todosElementos.map((el) => el.innerText).join("\n");
     const textosCompleto = todosElementos.map((el) => el.innerText);
 console.log(todosElementos);
+todosElementos.forEach((item, index) => {
+  console.log(item.innerText + " forEach");
+});
 console.log(textoCompleto);
 console.log(textosCompleto);
     navigator.clipboard.writeText(textoCompleto)
