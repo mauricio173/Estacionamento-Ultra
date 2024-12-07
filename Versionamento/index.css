@@ -139,5 +139,9 @@ hr {
 }*/
 
 #texArea {
+ display: flex;
+ align-items: center;
+ flex-flow: column wrap;
+ justify-content: space-around;
  margin: 3px 16px;
 }
