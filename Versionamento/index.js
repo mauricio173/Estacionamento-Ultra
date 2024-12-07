@@ -153,6 +153,18 @@ console.log(valido);
       .replace(/[\u0300-\u036f]/g, "")
       .trim();
     el.style.color = "green"; // CPF válido em verde
+    
+    // Adiciona evento para copiar o texto ao clicar no <p>
+    el.addEventListener("click", () => {
+      navigator.clipboard.writeText(el.innerText)
+        .then(() => {
+          alert("Texto copiado para a área de transferência!");
+        })
+        .catch((err) => {
+          console.error("Erro ao copiar texto: ", err);
+        });
+    });
+    
     cadastros.appendChild(el);
 
     nome.value = ""; // Limpa o campo CPF
