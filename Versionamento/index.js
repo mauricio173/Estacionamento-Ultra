@@ -181,7 +181,7 @@ document.querySelector("#cadastros").addEventListener("click", (event) => {
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
      texArea.value = `
-     ${textoCompleto}
+     ${textoCompleto.trim()}
      `;
       })
       .catch((err) => {
