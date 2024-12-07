@@ -169,6 +169,7 @@ console.log(valido);
     cadastros.addEventListener("click", () => {
       navigator.clipboard.writeText(el.innerText)
         .then(() => {
+          
           alert("Texto copiado para a área de transferência!" + el.innerText);
         })
         .catch((err) => {
