@@ -185,7 +185,7 @@ todosElementos.forEach((item, index) => {
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
      todosElementos.forEach((item, index) => {
-       
+       item = textoCompleto;
      texArea.innerHTML = `
      ${item} <br>
      `;
