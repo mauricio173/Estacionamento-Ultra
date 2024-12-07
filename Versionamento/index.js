@@ -166,12 +166,15 @@ console.log(valido);
     });*/
     
     // Adiciona evento para copiar o texto ao clicar no <p>
+    
+    cadastros.appendChild(el);
+    
     cadastros.addEventListener("click", () => {
       navigator.clipboard.writeText(el.innerText)
         .then(() => {
           const formato = document.querySelector("#formato");
           formato.innerHTML = `
-          ${itens.innerText}
+          ${el.innerText}
           `;
           // alert("Texto copiado para a área de transferência!" + el.innerText);
         })
@@ -179,8 +182,6 @@ console.log(valido);
           console.error("Erro ao copiar texto: ", err);
         });
     });
-    
-    cadastros.appendChild(el);
 
     nome.value = ""; // Limpa o campo CPF
     cpf.value = ""; // Limpa o campo CPF
