@@ -176,7 +176,8 @@ document.querySelector("#cadastros").addEventListener("click", (event) => {
     // Copia o texto de todos os <p> do container
     const todosElementos = Array.from(document.querySelectorAll("#cadastros p"));
     const textoCompleto = todosElementos.map((el) => el.innerText).join("\n");
-console.log(textoCompleto);
+    const textosCompleto = todosElementos.map((el) => el.innerText);
+console.log(textosCompleto);
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
