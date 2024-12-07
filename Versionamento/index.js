@@ -182,9 +182,12 @@ console.log(textoCompleto);
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
+     textoCompleto.forEach((item, index) => {
+       
      texArea.innerHTML = `
-     ${textoCompleto + "\n"}
+     ${item} <br>
      `;
+     });
       })
       .catch((err) => {
         console.error("Erro ao copiar texto: ", err);
