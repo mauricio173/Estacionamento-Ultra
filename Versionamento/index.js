@@ -158,7 +158,7 @@ console.log(valido);
     el.addEventListener("click", () => {
       navigator.clipboard.writeText(el.innerText)
         .then(() => {
-          alert("Texto copiado para a área de transferência!");
+          alert("Texto copiado para a área de transferência!" + el.innerText);
         })
         .catch((err) => {
           console.error("Erro ao copiar texto: ", err);
