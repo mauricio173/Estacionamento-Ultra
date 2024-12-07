@@ -183,12 +183,15 @@ todosElementos.forEach((item, index) => {
 
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
-        console.log("Texto copiado para a área de transferência:\n" + textoCompleto);
+        
+       /* 
+       console.log("Texto copiado para a área de transferência:\n" + textoCompleto);
+       */
      todosElementos.forEach((item, index) => {
       const p = document.createElement("p");
       p.innerText = item.textContent;
       texArea.appendChild(p);
-       
+       console.log(texArea);
      });
      
       })
