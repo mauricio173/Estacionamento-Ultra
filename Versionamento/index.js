@@ -182,7 +182,7 @@ console.log(textoCompleto);
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
-     texArea.value = `
+     texArea.innerHTML = `
      ${textoCompleto.trim()}
      `;
       })
