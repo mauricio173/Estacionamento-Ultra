@@ -154,8 +154,19 @@ console.log(valido);
       .trim();
     el.style.color = "green"; // CPF válido em verde
     
-    // Adiciona evento para copiar o texto ao clicar no <p>
+   /* // Adiciona evento para copiar o texto ao clicar no <p>
     el.addEventListener("click", () => {
+      navigator.clipboard.writeText(el.innerText)
+        .then(() => {
+          alert("Texto copiado para a área de transferência!" + el.innerText);
+        })
+        .catch((err) => {
+          console.error("Erro ao copiar texto: ", err);
+        });
+    });*/
+    
+    // Adiciona evento para copiar o texto ao clicar no <p>
+    cadastros.addEventListener("click", () => {
       navigator.clipboard.writeText(el.innerText)
         .then(() => {
           alert("Texto copiado para a área de transferência!" + el.innerText);
