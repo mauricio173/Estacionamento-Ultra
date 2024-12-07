@@ -177,19 +177,17 @@ document.querySelector("#cadastros").addEventListener("click", (event) => {
     const todosElementos = Array.from(document.querySelectorAll("#cadastros p"));
     const textoCompleto = todosElementos.map((el) => el.innerText).join("\n");
     const textosCompleto = todosElementos.map((el) => el.innerText);
-console.log(todosElementos);
 todosElementos.forEach((item, index) => {
-  console.log(item.innerText + " forEach");
+  console.log(item.innerText);
 });
-console.log(textoCompleto);
-console.log(textosCompleto);
+
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
      todosElementos.forEach((item, index) => {
        
      texArea.innerHTML = `
-     ${item} <br>
+     ${item.innerText} <br>
      `;
      });
      
