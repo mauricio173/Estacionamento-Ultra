@@ -21,7 +21,11 @@ p {
   margin: 0;
 }
 
-.header {
+.header, .footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 100vw;
+  background: #fff;
 }
 
 .main {
