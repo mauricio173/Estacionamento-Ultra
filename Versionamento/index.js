@@ -177,8 +177,9 @@ document.querySelector("#cadastros").addEventListener("click", (event) => {
     const todosElementos = Array.from(document.querySelectorAll("#cadastros p"));
     const textoCompleto = todosElementos.map((el) => el.innerText).join("\n");
     const textosCompleto = todosElementos.map((el) => el.innerText);
-console.log(textosCompleto);
+console.log(todosElementos);
 console.log(textoCompleto);
+console.log(textosCompleto);
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
@@ -188,6 +189,7 @@ console.log(textoCompleto);
      ${item} <br>
      `;
      });
+     
       })
       .catch((err) => {
         console.error("Erro ao copiar texto: ", err);
