@@ -176,7 +176,7 @@ console.log(valido);
           itens.forEach((item, index) => {
             
           formato.innerHTML = `
-          ${el.innerText}
+          ${item.innerText}
           `;
           });
           // alert("Texto copiado para a área de transferência!" + el.innerText);
