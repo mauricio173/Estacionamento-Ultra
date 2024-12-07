@@ -106,6 +106,8 @@ function validarDigitosVerificadores(cpf) {
  el.style.color = valido ? "green" : "red";
 }*/
 
+const texArea = document.querySelector("#texArea");
+
 function mostrarResultado(mensagem, valido) {
   const cadastros = document.querySelector("#cadastros");
   const cpfValue = cpf.value.replace(/\D/g, "");
@@ -178,12 +180,22 @@ document.querySelector("#cadastros").addEventListener("click", (event) => {
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
+     texArea.value = `
+     ${textoCompleto}
+     `;
       })
       .catch((err) => {
         console.error("Erro ao copiar texto: ", err);
       });
   }
 });
+
+
+
+
+
+
+
 
 
 function mostrarResultados(mensagem, valido) {
