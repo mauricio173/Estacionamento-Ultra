@@ -121,6 +121,86 @@ function mostrarResultado(mensagem, valido) {
   itens.forEach((item) => {
     if (item.textContent.startsWith(cpfValue)) {
       cpfJaInserido = true;
+      item.style.color = "black"; // Muda a cor para preto temporariamente
+      
+      setTimeout(function () {
+        item.style.color = "green"; // Retorna a cor para verde
+      }, 5000);
+    }
+  });
+
+  if (cpfJaInserido) {
+    const invalido = document.querySelector("#invalido");
+    invalido.style = "display: block; color: black";
+    invalido.innerHTML = "CPF já inserido e marcado.";
+    setTimeout(function () {
+      invalido.style = "display: none";
+    }, 5000);
+    cpf.value = ""; // Limpa o campo CPF
+    return;
+  }
+
+  // Adiciona um novo CPF válido na lista
+  if (valido && nome.value.trim() !== "") {
+    const invalido = document.querySelector("#invalido");
+    invalido.style = "display: none";
+    const el = document.createElement("p");
+    el.innerHTML = texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+    el.style.color = "green"; // CPF válido em verde
+    cadastros.appendChild(el);
+
+    nome.value = ""; // Limpa o campo nome
+    cpf.value = ""; // Limpa o campo CPF
+  }
+
+  // Exibe mensagem de CPF inválido
+  if (!valido) {
+    const invalido = document.querySelector("#invalido");
+    invalido.style = "display: block; color: red";
+    invalido.innerHTML = "CPF inválido";
+    setTimeout(function () {
+      invalido.style = "display: none";
+    }, 5000);
+  }
+}
+
+// Adiciona evento de clique no container cadastros
+document.querySelector("#cadastros").addEventListener("click", (event) => {
+  // Verifica se o elemento clicado é um <p>
+  if (event.target.tagName === "P") {
+    // Copia o texto de todos os <p> do container
+    const todosElementos = Array.from(document.querySelectorAll("#cadastros p"));
+    const textoCompleto = todosElementos.map((el) => el.innerText).join("\n");
+
+    navigator.clipboard.writeText(textoCompleto)
+      .then(() => {
+        alert("Texto copiado para a área de transferência:\n" + textoCompleto);
+      })
+      .catch((err) => {
+        console.error("Erro ao copiar texto: ", err);
+      });
+  }
+});
+
+
+function mostrarResultados(mensagem, valido) {
+  const cadastros = document.querySelector("#cadastros");
+  const cpfValue = cpf.value.replace(/\D/g, "");
+  const nomeValue = nome.value.toUpperCase().trim();
+  const dataInicioValue = dataInicio.value;
+  const dataFinalValue = dataFinal.value;
+
+  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
+
+  // Verifica se o CPF já existe na lista
+  const itens = cadastros.querySelectorAll("p");
+  let cpfJaInserido = false;
+  itens.forEach((item) => {
+    if (item.textContent.startsWith(cpfValue)) {
+      cpfJaInserido = true;
       item.style.color = "black"; // Muda a cor para amarelo
       
       setTimeout(function() {
