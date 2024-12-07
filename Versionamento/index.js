@@ -144,7 +144,7 @@ function mostrarResultado(mensagem, valido) {
 
  // Adiciona um novo CPF válido na lista
  console.log(nome.value.startsWith(" "));
- if (valido && nome.value.trim() !== "" && !nome.value.startsWith(" ")) {
+ if (valido && nome.value.trim() !== "") {
   const invalido = document.querySelector("#invalido");
   invalido.style = "display: none";
   const el = document.createElement("p");
