@@ -183,7 +183,7 @@ console.log(textoCompleto);
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
      texArea.innerHTML = `
-     ${textoCompleto.join("\n")}
+     ${textoCompleto + "\n"}
      `;
       })
       .catch((err) => {
