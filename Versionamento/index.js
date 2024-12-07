@@ -182,7 +182,7 @@ console.log(textoCompleto);
     navigator.clipboard.writeText(textoCompleto)
       .then(() => {
         alert("Texto copiado para a área de transferência:\n" + textoCompleto);
-     textoCompleto.forEach((item, index) => {
+     todosElementos.forEach((item, index) => {
        
      texArea.innerHTML = `
      ${item} <br>
