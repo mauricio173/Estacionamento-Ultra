@@ -173,7 +173,7 @@ console.log(valido);
       navigator.clipboard.writeText(el.innerText)
         .then(() => {
           const formato = document.querySelector("#formato");
-         console.log(itens.innerText);
+         console.log(itens.textContent);
            alert("Texto copiado para a área de transferência!" + el.innerText);
         })
         .catch((err) => {
