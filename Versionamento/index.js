@@ -169,10 +169,7 @@ console.log(valido);
     cadastros.addEventListener("click", () => {
       navigator.clipboard.writeText(el.innerText)
         .then(() => {
-          const formato = document.querySelector("#formato");
-          formato.innerHTML = `
-          ${el.innerText}
-          `;
+          
           // alert("Texto copiado para a área de transferência!" + el.innerText);
         })
         .catch((err) => {
@@ -181,7 +178,10 @@ console.log(valido);
     });
     
     cadastros.appendChild(el);
-
+const formato = document.querySelector("#formato");
+          formato.innerHTML = `
+          ${itens.innerText}
+          `;
     nome.value = ""; // Limpa o campo CPF
     cpf.value = ""; // Limpa o campo CPF
   }
