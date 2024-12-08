@@ -164,7 +164,7 @@ function mostrarResultado(mensagem, valido) {
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
-   item.style.color = "black"; // Muda a cor para preto temporariamente
+   item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
@@ -176,7 +176,7 @@ function mostrarResultado(mensagem, valido) {
    }
    setTimeout(function () {
     invalido.style = "display: none; color: black";
-    item.style.color = "#28abab"; // Retorna a cor para verde
+    item.style.color = "#A44378"; // Retorna a cor para verde
    }, 4000);
   }
  });
