@@ -84,6 +84,7 @@ const texArea = document.querySelector("#texArea");
 
 function mostrarResultado(mensagem, valido) {
   const cadastros = document.querySelector("#cadastros");
+  const invalido = document.querySelector("#invalido");
   const cpfValue = cpf.value.replace(/\D/g, "");
   const nomeValue = nome.value.toUpperCase().trim();
   const dataInicioValue = dataInicio.value;
@@ -115,7 +116,7 @@ function mostrarResultado(mensagem, valido) {
   });
 
   if (itemJaInserido) {
-    const invalido = document.querySelector("#invalido");
+    
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF ou nome já inseridos e marcados.";
     setTimeout(function () {
@@ -128,7 +129,7 @@ function mostrarResultado(mensagem, valido) {
 
   // Adiciona um novo CPF válido na lista
   if (valido && nome.value.trim() !== "") {
-    const invalido = document.querySelector("#invalido");
+   
     invalido.style = "display: none";
     const el = document.createElement("p");
     el.innerHTML = texto
