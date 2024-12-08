@@ -83,6 +83,78 @@ function validarDigitosVerificadores(cpf) {
 const texArea = document.querySelector("#texArea");
 
 function mostrarResultado(mensagem, valido) {
+  const cadastros = document.querySelector("#cadastros");
+  const cpfValue = cpf.value.replace(/\D/g, "");
+  const nomeValue = nome.value.toUpperCase().trim();
+  const dataInicioValue = dataInicio.value;
+  const dataFinalValue = dataFinal.value;
+
+  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
+
+  // Verifica se o CPF ou o nome já existem na lista
+  const itens = cadastros.querySelectorAll("p");
+  let itemJaInserido = false;
+
+  itens.forEach(item => {
+    const itemTexto = item.textContent.toUpperCase(); // Converte para maiúsculas para comparar
+    if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue)) {
+      itemJaInserido = true;
+      item.style.color = "black"; // Muda a cor para preto temporariamente
+
+      setTimeout(function () {
+        item.style.color = "#28abab"; // Retorna a cor para verde
+      }, 4000);
+    }
+  });
+
+  if (itemJaInserido) {
+    const invalido = document.querySelector("#invalido");
+    invalido.style = "display: block; color: black";
+    invalido.innerHTML = "CPF ou nome já inseridos e marcados.";
+    setTimeout(function () {
+      invalido.style = "display: none";
+    }, 4000);
+    cpf.value = ""; // Limpa o campo CPF
+    nome.value = ""; // Limpa o campo nome
+    return;
+  }
+
+  // Adiciona um novo CPF válido na lista
+  if (valido && nome.value.trim() !== "") {
+    const invalido = document.querySelector("#invalido");
+    invalido.style = "display: none";
+    const el = document.createElement("p");
+    el.innerHTML = texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+    el.style.color = "#A44378"; // CPF válido
+
+    invalido.style = "display: block; color: #28abab";
+    invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
+    setTimeout(function () {
+      invalido.style = "display: none";
+    }, 4000);
+
+    cadastros.appendChild(el);
+
+    nome.value = ""; // Limpa o campo nome
+    cpf.value = ""; // Limpa o campo CPF
+  }
+
+  // Exibe mensagem de CPF inválido
+  if (!valido) {
+    const invalido = document.querySelector("#invalido");
+    invalido.style = "display: block; color: red";
+    invalido.innerHTML = "CPF inválido";
+    setTimeout(function () {
+      invalido.style = "display: none";
+    }, 4000);
+  }
+}
+
+
+/*function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
  const cpfValue = cpf.value.replace(/\D/g, "");
  const nomeValue = nome.value.toUpperCase().trim();
@@ -150,7 +222,7 @@ function mostrarResultado(mensagem, valido) {
    invalido.style = "display: none";
   }, 4000);
  }
-}
+}*/
 
 // Adiciona evento de clique no container cadastros
 document.querySelector("#cadastros").addEventListener("click", event => {
