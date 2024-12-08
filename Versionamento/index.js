@@ -46,7 +46,7 @@ function validarCPF() {
    
   setTimeout(function () {
    invalido.style = "display: none";
-   cpf.value = "";
+   cpfInput.value = "";
   }, 4000);
   return false;
  }
@@ -62,7 +62,7 @@ function validarCPF() {
    
   setTimeout(function () {
    invalido.style = "display: none";
-   cpf.value = "";
+   cpfInput.value = "";
   }, 4000);
   return false;
  }
@@ -78,7 +78,7 @@ function validarCPF() {
    
   setTimeout(function () {
    invalido.style = "display: none";
-   cpf.value = "";
+   cpfInput.value = "";
   }, 4000);
   return false;
  }
