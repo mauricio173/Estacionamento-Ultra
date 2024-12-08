@@ -96,8 +96,6 @@ function mostrarResultado(mensagem, valido) {
   let itemJaInserido = false;
 
   itens.forEach(item => {
-    // const itemTexto = item.textContent.toUpperCase(); // Converte para maiúsculas para comparar
-    
     const itemTexto = item.textContent
       .toUpperCase()
       .normalize("NFD")
