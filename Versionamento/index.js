@@ -46,8 +46,8 @@ function validarCPF() {
    
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 4000);
    cpfInput.value = "";
+  }, 4000);
   return false;
  }
 
