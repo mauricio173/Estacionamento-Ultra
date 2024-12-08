@@ -78,94 +78,90 @@ function validarDigitosVerificadores(cpf) {
  return true;
 }
 
-
-
 const texArea = document.querySelector("#texArea");
 
 function mostrarResultado(mensagem, valido) {
-  const cadastros = document.querySelector("#cadastros");
+ const cadastros = document.querySelector("#cadastros");
+ const invalido = document.querySelector("#invalido");
+ const cpfValue = cpf.value.replace(/\D/g, "");
+ const nomeValue = nome.value.toUpperCase().trim();
+ const dataInicioValue = dataInicio.value;
+ const dataFinalValue = dataFinal.value;
+
+ const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
+
+ // Verifica se o CPF ou o nome já existem na lista
+ const itens = cadastros.querySelectorAll("p");
+ let itemJaInserido = false;
+
+ itens.forEach(item => {
+  const itemTexto = item.textContent
+   .toUpperCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
+  const nome = nomeValue
+   .toUpperCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "");
+
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(nome)) {
+   itemJaInserido = true;
+   item.style.color = "purple"; // Muda a cor para preto temporariamente
+   if (itemTexto.includes(cpfValue)) {
+    invalido.innerHTML = "CPF já inserido.";
+   }
+   if (itemTexto.includes(nome)) {
+    invalido.innerHTML = "Nome já inserido.";
+   }
+   setTimeout(function () {
+    item.style.color = "#28abab"; // Retorna a cor para verde
+   }, 4000);
+  }
+ });
+
+ if (itemJaInserido) {
+  invalido.style = "display: block; color: black";
+
+  setTimeout(function () {
+   invalido.style = "display: none";
+  }, 4000);
+  cpf.value = ""; // Limpa o campo CPF
+  nome.value = ""; // Limpa o campo nome
+  return;
+ }
+
+ // Adiciona um novo CPF válido na lista
+ if (valido && nome.value.trim() !== "") {
+  invalido.style = "display: none";
+  const el = document.createElement("p");
+  el.innerHTML = texto
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "")
+   .trim();
+  el.style.color = "#A44378"; // CPF válido
+
+  invalido.style = "display: block; color: #28abab";
+  invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
+  setTimeout(function () {
+   invalido.style = "display: none";
+  }, 4000);
+
+  cadastros.appendChild(el);
+
+  nome.value = ""; // Limpa o campo nome
+  cpf.value = ""; // Limpa o campo CPF
+ }
+
+ // Exibe mensagem de CPF inválido
+ if (!valido) {
   const invalido = document.querySelector("#invalido");
-  const cpfValue = cpf.value.replace(/\D/g, "");
-  const nomeValue = nome.value.toUpperCase().trim();
-  const dataInicioValue = dataInicio.value;
-  const dataFinalValue = dataFinal.value;
-
-  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
-
-  // Verifica se o CPF ou o nome já existem na lista
-  const itens = cadastros.querySelectorAll("p");
-  let itemJaInserido = false;
-
-  itens.forEach(item => {
-    const itemTexto = item.textContent
-      .toUpperCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
-     const nome = nomeValue.toUpperCase()
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "");
-    
-    if (itemTexto.includes(cpfValue) || itemTexto.includes(nome)) {
-      itemJaInserido = true;
-      item.style.color = "purple"; // Muda a cor para preto temporariamente
-if (itemTexto.includes(cpfValue)) {
-  invalido.innerHTML = "CPF já inserido.";
+  invalido.style = "display: block; color: red";
+  invalido.innerHTML = "CPF inválido";
+  setTimeout(function () {
+   invalido.style = "display: none";
+  }, 4000);
+ }
 }
-if (itemTexto.includes(nome)) {
-  invalido.innerHTML = "Nome já inserido.";
-}
-      setTimeout(function () {
-        item.style.color = "#28abab"; // Retorna a cor para verde
-      }, 4000);
-    }
-  });
-
-  if (itemJaInserido) {
-    
-    invalido.style = "display: block; color: black";
-   
-    setTimeout(function () {
-      invalido.style = "display: none";
-    }, 4000);
-    cpf.value = ""; // Limpa o campo CPF
-    nome.value = ""; // Limpa o campo nome
-    return;
-  }
-
-  // Adiciona um novo CPF válido na lista
-  if (valido && nome.value.trim() !== "") {
-   
-    invalido.style = "display: none";
-    const el = document.createElement("p");
-    el.innerHTML = texto
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .trim();
-    el.style.color = "#A44378"; // CPF válido
-
-    invalido.style = "display: block; color: #28abab";
-    invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
-    setTimeout(function () {
-      invalido.style = "display: none";
-    }, 4000);
-
-    cadastros.appendChild(el);
-
-    nome.value = ""; // Limpa o campo nome
-    cpf.value = ""; // Limpa o campo CPF
-  }
-
-  // Exibe mensagem de CPF inválido
-  if (!valido) {
-    const invalido = document.querySelector("#invalido");
-    invalido.style = "display: block; color: red";
-    invalido.innerHTML = "CPF inválido";
-    setTimeout(function () {
-      invalido.style = "display: none";
-    }, 4000);
-  }
-}
-
 
 /*function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
@@ -252,15 +248,15 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   navigator.clipboard
    .writeText(textoCompleto)
    .then(() => {
-      invalido.style = "display: block; color: #28abab";
-  invalido.innerHTML = "CPF cadastrado com sucesso";
-  setTimeout(function () {
-   invalido.style = "display: none";
-  }, 4000);
+    invalido.style = "display: block; color: #28abab";
+    invalido.innerHTML = "CPF cadastrado com sucesso";
+    setTimeout(function () {
+     invalido.style = "display: none";
+    }, 4000);
     /* 
        console.log("Texto copiado para a área de transferência:\n" + textoCompleto);
        */
-/*    todosElementos.forEach((item, index) => {
+    /*    todosElementos.forEach((item, index) => {
      const p = document.createElement("p");
      p.innerText = item.textContent;
      texArea.appendChild(p);
@@ -272,5 +268,3 @@ document.querySelector("#cadastros").addEventListener("click", event => {
    });
  }
 });
-
-
