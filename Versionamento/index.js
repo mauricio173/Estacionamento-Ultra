@@ -99,18 +99,18 @@ function mostrarResultado(mensagem, valido) {
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
-  const nome = nomeValue
+  const nomes = nomeValue
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
 
-  if (itemTexto.includes(cpfValue) || itemTexto.includes(nome)) {
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
    item.style.color = "purple"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
     invalido.innerHTML = "CPF já inserido.";
    }
-   if (itemTexto.includes(nome)) {
+   if (itemTexto.includes(nomes)) {
     invalido.innerHTML = "Nome já inserido.";
    }
    setTimeout(function () {
