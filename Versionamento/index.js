@@ -91,9 +91,15 @@ function mostrarResultado(mensagem, valido) {
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
  
  if (nomeValue.trim() == "" || nomeValue.startsWith(" ")) {
+   invalido.style = "display: block; color: black";
+
    invalido.innerHTML = `
    Nome Vazio!
    `;
+   
+  setTimeout(function () {
+   invalido.style = "display: none";
+  }, 4000);
    return;
  }
 
