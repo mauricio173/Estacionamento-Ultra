@@ -164,7 +164,7 @@ function mostrarResultado(mensagem, valido) {
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
-   item.style.color = "purple"; // Muda a cor para preto temporariamente
+   item.style.color = "black"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
