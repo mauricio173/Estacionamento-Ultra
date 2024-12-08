@@ -110,6 +110,7 @@ function mostrarResultado(mensagem, valido) {
    if (itemTexto.includes(cpfValue)) {
     invalido.innerHTML = "CPF já inserido.";
    }
+   
    if (itemTexto.includes(nomes)) {
     invalido.innerHTML = "Nome já inserido.";
    }
