@@ -167,7 +167,7 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   navigator.clipboard
    .writeText(textoCompleto)
    .then(() => {
-      invalido.style = "display: block; color: green";
+      invalido.style = "display: block; color: #28abab";
   invalido.innerHTML = "CPF cadastrado com sucesso";
   setTimeout(function () {
    invalido.style = "display: none";
