@@ -46,8 +46,8 @@ function validarCPF() {
    
   setTimeout(function () {
    invalido.style = "display: none";
-   cpfInput.value = "";
   }, 4000);
+   cpfInput.value = "";
   return false;
  }
 
@@ -179,7 +179,7 @@ function mostrarResultado(mensagem, valido) {
  });
 
  if (itemJaInserido) {
-  invalido.style = "display: block; color: black";
+
 
   setTimeout(function () {
    invalido.style = "display: none";
