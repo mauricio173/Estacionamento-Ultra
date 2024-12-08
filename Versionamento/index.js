@@ -106,7 +106,7 @@ function mostrarResultado(mensagem, valido) {
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, "");
     
-    if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue)) {
+    if (itemTexto.includes(cpfValue) || itemTexto.includes(nome)) {
       itemJaInserido = true;
       item.style.color = "black"; // Muda a cor para preto temporariamente
 
