@@ -107,7 +107,7 @@ function mostrarResultado(mensagem, valido) {
    invalido.style = "display: block; color: black";
 
    invalido.innerHTML = `
-   Nome Vazio!
+   CPF Vazio!
    `;
    
   setTimeout(function () {
