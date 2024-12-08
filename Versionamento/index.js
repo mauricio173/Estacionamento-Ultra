@@ -102,7 +102,9 @@ function mostrarResultado(mensagem, valido) {
       .toUpperCase()
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
-      
+     const nome = nomeValue.toUpperCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "");
     
     if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue)) {
       itemJaInserido = true;
