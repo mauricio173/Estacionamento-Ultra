@@ -143,7 +143,7 @@ function mostrarResultado(mensagem, valido) {
    
   setTimeout(function () {
    invalido.style = "display: none";
-   nome.value = "";
+   cpf.value = "";
   }, 4000);
    return;
  }
