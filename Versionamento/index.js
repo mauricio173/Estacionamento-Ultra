@@ -133,7 +133,7 @@ function mostrarResultado(mensagem, valido) {
   invalido.innerHTML = "CPF cadastrado com sucesso";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 5000);
+  }, 3000);
   
   cadastros.appendChild(el);
 
