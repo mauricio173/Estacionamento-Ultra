@@ -103,6 +103,19 @@ function mostrarResultado(mensagem, valido) {
   }, 4000);
    return;
  }
+ if (!cpfValue) {
+   invalido.style = "display: block; color: black";
+
+   invalido.innerHTML = `
+   Nome Vazio!
+   `;
+   
+  setTimeout(function () {
+   invalido.style = "display: none";
+   nome.value = "";
+  }, 4000);
+   return;
+ }
 
  // Verifica se o CPF ou o nome já existem na lista
  const itens = cadastros.querySelectorAll("p");
