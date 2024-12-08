@@ -44,6 +44,16 @@ function validarCPF() {
  // Verificar se todos os dígitos são iguais (ex.: "111.111.111-11")
  if (/^(\d)\1{10}$/.test(cpf)) {
   mostrarResultado("CPF inválido: todos os dígitos são iguais.", false);
+   invalido.style = "display: block; color: black";
+
+   invalido.innerHTML = `
+   CPF inválido: todos os dígitos são iguais.
+   `;
+   
+  setTimeout(function () {
+   invalido.style = "display: none";
+   nome.value = "";
+  }, 4000);
   return false;
  }
 
