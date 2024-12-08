@@ -106,7 +106,7 @@ function mostrarResultado(mensagem, valido) {
     
     if (itemTexto.includes(cpfValue) || itemTexto.includes(nome)) {
       itemJaInserido = true;
-      item.style.color = "black"; // Muda a cor para preto temporariamente
+      item.style.color = "purple"; // Muda a cor para preto temporariamente
 
       setTimeout(function () {
         item.style.color = "#28abab"; // Retorna a cor para verde
