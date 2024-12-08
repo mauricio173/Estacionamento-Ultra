@@ -78,33 +78,7 @@ function validarDigitosVerificadores(cpf) {
  return true;
 }
 
-/*function mostrarResultado(mensagem, valido) {
- const cadastros = document.querySelector("#cadastros");
- const el = document.createElement("p");
- const texto = cpf.value.replace(/\D/g, "") + ";" + nome.value.toUpperCase().trim() + ";" + dataInicio.value + ";" + dataFinal.value + ";1;" + cpf.value.replace(/\D/g, "");
- // ${mensagem}
- el.innerHTML = `${texto
-  .normalize("NFD")
-  .replace(/[\u0300-\u036f]/g, "")
-  .trim()}`;
 
- if (valido) {
-  const invalido = document.querySelector("#invalido");
-  invalido.style="display: none";
-  cadastros.appendChild(el);
- cpf.value = "";
- }
- if (!valido) {
-   const invalido = document.querySelector("#invalido");
-  invalido.style="display: block";
-  invalido.style="color: red";
-  invalido.innerHTML = `
-  CPF inválido
-  `;
- cpf.value = "";
- }
- el.style.color = valido ? "green" : "red";
-}*/
 
 const texArea = document.querySelector("#texArea");
 
