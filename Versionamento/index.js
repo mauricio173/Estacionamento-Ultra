@@ -200,9 +200,9 @@ function mostrarResultado(mensagem, valido) {
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "")
    .trim();
-  el.style.color = "#A44378"; // CPF válido
+  el.style.color = "#A44378"; // roxo CPF válido
 
-  invalido.style = "display: block; color: #28abab";
+  invalido.style = "display: block; color: #28abab"; // verde
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
    invalido.style = "display: none";
