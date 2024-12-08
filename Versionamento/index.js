@@ -4,6 +4,7 @@ const dataInicio = document.querySelector("#dataInicio");
 const dataFinal = document.querySelector("#dataFinal");
 const cadastrar = document.querySelector("#cadastrar");
 const btnEnviar = document.querySelector("#btnEnviar");
+const invalido = document.querySelector("#invalido");
 const hoje = new Date();
 const dataAtual = hoje.getFullYear() + "-" + (hoje.getMonth() + 1) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
 
@@ -82,7 +83,7 @@ const texArea = document.querySelector("#texArea");
 
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
- const invalido = document.querySelector("#invalido");
+ 
  const cpfValue = cpf.value.replace(/\D/g, "");
  const nomeValue = nome.value.toUpperCase().trim();
  const dataInicioValue = dataInicio.value;
