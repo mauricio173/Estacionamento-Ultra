@@ -50,6 +50,16 @@ function validarCPF() {
  // Calcular os dígitos verificadores
  if (!validarDigitosVerificadores(cpf)) {
   mostrarResultado("CPF inválido: dígitos verificadores incorretos.", false);
+  invalido.style = "display: block; color: black";
+
+   invalido.innerHTML = `
+   CPF inválido: dígitos verificadores incorretos.
+   `;
+   
+  setTimeout(function () {
+   invalido.style = "display: none";
+   nome.value = "";
+  }, 4000);
   return false;
  }
 
