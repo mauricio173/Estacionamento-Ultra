@@ -126,7 +126,7 @@ function mostrarResultado(mensagem, valido) {
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "")
    .trim();
-  el.style.color = "green"; // CPF válido em verde
+  el.style.color = " #A44378"; // CPF válido em verde
   
  
   invalido.style = "display: block; color: green";
