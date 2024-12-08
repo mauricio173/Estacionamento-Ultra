@@ -127,6 +127,14 @@ function mostrarResultado(mensagem, valido) {
    .replace(/[\u0300-\u036f]/g, "")
    .trim();
   el.style.color = "green"; // CPF válido em verde
+  
+ 
+  invalido.style = "display: block; color: green";
+  invalido.innerHTML = "CPF cadastrado com sucesso";
+  setTimeout(function () {
+   invalido.style = "display: none";
+  }, 5000);
+  
   cadastros.appendChild(el);
 
   nome.value = ""; // Limpa o campo nome
