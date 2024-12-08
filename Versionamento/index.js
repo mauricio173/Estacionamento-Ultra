@@ -96,7 +96,14 @@ function mostrarResultado(mensagem, valido) {
   let itemJaInserido = false;
 
   itens.forEach(item => {
-    const itemTexto = item.textContent.toUpperCase(); // Converte para maiúsculas para comparar
+    // const itemTexto = item.textContent.toUpperCase(); // Converte para maiúsculas para comparar
+    
+    const itemTexto = item.textContent
+      .toUpperCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
+      
+    
     if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue)) {
       itemJaInserido = true;
       item.style.color = "black"; // Muda a cor para preto temporariamente
