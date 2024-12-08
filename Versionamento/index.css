@@ -23,6 +23,7 @@ p {
 }
 
 a {
+  color: var(--laranja);
   text-decoration: none;
 }
 
