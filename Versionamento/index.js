@@ -108,7 +108,12 @@ function mostrarResultado(mensagem, valido) {
     if (itemTexto.includes(cpfValue) || itemTexto.includes(nome)) {
       itemJaInserido = true;
       item.style.color = "purple"; // Muda a cor para preto temporariamente
-
+if (itemTexto.includes(cpfValue)) {
+  invalido.innerHTML = "CPF já inserido.";
+}
+if (itemTexto.includes(nome)) {
+  invalido.innerHTML = "Nome já inserido.";
+}
       setTimeout(function () {
         item.style.color = "#28abab"; // Retorna a cor para verde
       }, 4000);
