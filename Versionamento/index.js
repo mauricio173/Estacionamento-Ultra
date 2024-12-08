@@ -89,6 +89,13 @@ function mostrarResultado(mensagem, valido) {
  const dataFinalValue = dataFinal.value;
 
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
+ 
+ if (nomeValue.trim() == "" || nomeValue.startsWith(" ")) {
+   invalido.innerHTML = `
+   Nome Vazio!
+   `;
+   return;
+ }
 
  // Verifica se o CPF ou o nome já existem na lista
  const itens = cadastros.querySelectorAll("p");
