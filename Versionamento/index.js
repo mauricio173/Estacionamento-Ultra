@@ -134,7 +134,7 @@ function mostrarResultado(mensagem, valido) {
   }, 4000);
    return;
  }
- if (!cpfValue) {
+ if (cpfValue.trim() == "" || cpfValue.startsWith(" ")) {
    invalido.style = "display: block; color: black";
 
    invalido.innerHTML = `
