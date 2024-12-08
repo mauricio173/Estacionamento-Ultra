@@ -167,6 +167,11 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   navigator.clipboard
    .writeText(textoCompleto)
    .then(() => {
+      invalido.style = "display: block; color: green";
+  invalido.innerHTML = "CPF cadastrado com sucesso";
+  setTimeout(function () {
+   invalido.style = "display: none";
+  }, 4000);
     /* 
        console.log("Texto copiado para a área de transferência:\n" + textoCompleto);
        */
