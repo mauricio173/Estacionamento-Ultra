@@ -38,6 +38,16 @@ function validarCPF() {
  // Verificar se tem 11 dígitos
  if (cpf.length !== 11) {
   mostrarResultado("CPF inválido: deve conter 11 dígitos.", false);
+   invalido.style = "display: block; color: black";
+
+   invalido.innerHTML = `
+   CPF inválido: deve conter 11 dígitos.
+   `;
+   
+  setTimeout(function () {
+   invalido.style = "display: none";
+   cpf.value = "";
+  }, 4000);
   return false;
  }
 
