@@ -134,7 +134,7 @@ function mostrarResultado(mensagem, valido) {
   }, 4000);
    return;
  }
- if (cpfValue.trim() == "" || cpfValue.startsWith(" ")) {
+/* if (cpfValue.trim() == "" || cpfValue.startsWith(" ")) {
    invalido.style = "display: block; color: black";
 
    invalido.innerHTML = `
@@ -146,7 +146,7 @@ function mostrarResultado(mensagem, valido) {
    cpf.value = "";
   }, 4000);
    return;
- }
+ }*/
 
  // Verifica se o CPF ou o nome já existem na lista
  const itens = cadastros.querySelectorAll("p");
@@ -166,13 +166,16 @@ function mostrarResultado(mensagem, valido) {
    itemJaInserido = true;
    item.style.color = "purple"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
+    invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
    }
    
    if (itemTexto.includes(nomes)) {
+    invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
    }
    setTimeout(function () {
+    invalido.style = "display: none; color: black";
     item.style.color = "#28abab"; // Retorna a cor para verde
    }, 4000);
   }
