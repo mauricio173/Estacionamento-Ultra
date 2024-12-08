@@ -43,7 +43,7 @@ ul {
 }
 
 .footer {
- background: var(--azulP);
+ background: var(--verde);
  border-radius: 0.5rem;
  padding: 1rem;
  margin: 4rem 1rem 1rem;
@@ -71,7 +71,7 @@ ul {
  height: 3px;
  width: 20%;
  border-radius: 2px;
- background-color: #09ff00;
+ background-color: var(--verde);
 }
 
 .three-details-item {
