@@ -100,7 +100,7 @@ function mostrarResultado(mensagem, valido) {
    item.style.color = "black"; // Muda a cor para preto temporariamente
 
    setTimeout(function () {
-    item.style.color = "green"; // Retorna a cor para verde
+    item.style.color = "#28abab"; // Retorna a cor para verde
    }, 4000);
   }
  });
@@ -129,7 +129,7 @@ function mostrarResultado(mensagem, valido) {
   el.style.color = " #A44378"; // CPF válido em verde
   
  
-  invalido.style = "display: block; color: green";
+  invalido.style = "display: block; color: #28abab";
   invalido.innerHTML = "CPF cadastrado com sucesso";
   setTimeout(function () {
    invalido.style = "display: none";
