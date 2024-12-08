@@ -123,7 +123,7 @@ if (itemTexto.includes(nome)) {
   if (itemJaInserido) {
     
     invalido.style = "display: block; color: black";
-    invalido.innerHTML = "CPF ou nome já inseridos e marcados.";
+   
     setTimeout(function () {
       invalido.style = "display: none";
     }, 4000);
