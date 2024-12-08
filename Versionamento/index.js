@@ -128,9 +128,9 @@ function mostrarResultado(mensagem, valido) {
    Nome Vazio!
    `;
    
+   nome.value = "";
   setTimeout(function () {
    invalido.style = "display: none";
-   nome.value = "";
   }, 4000);
    return;
  }
