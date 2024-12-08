@@ -101,7 +101,7 @@ function mostrarResultado(mensagem, valido) {
 
    setTimeout(function () {
     item.style.color = "green"; // Retorna a cor para verde
-   }, 3000);
+   }, 4000);
   }
  });
 
@@ -111,7 +111,7 @@ function mostrarResultado(mensagem, valido) {
   invalido.innerHTML = "CPF já inserido e marcado.";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 3000);
+  }, 4000);
   cpf.value = ""; // Limpa o campo CPF
   return;
  }
@@ -133,7 +133,7 @@ function mostrarResultado(mensagem, valido) {
   invalido.innerHTML = "CPF cadastrado com sucesso";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 3000);
+  }, 4000);
   
   cadastros.appendChild(el);
 
@@ -148,7 +148,7 @@ function mostrarResultado(mensagem, valido) {
   invalido.innerHTML = "CPF inválido";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 3000);
+  }, 4000);
  }
 }
 
