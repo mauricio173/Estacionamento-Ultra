@@ -9,6 +9,7 @@ const btnOkSenha = document.querySelector("#btnOkSenha");
 
 btnOkSenha.addEventListener("click",  () => {
   if (inputSec.value == "ultra10") {
+    console.log(inputSec.value);
     boxSenha.classList.remove("show");
   }
 });
