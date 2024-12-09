@@ -50,6 +50,12 @@ ul {
 .main {
 }
 
+.marca {
+  display: flex; align-items: center; justify-content: center; font-size: 18px; text-align: center; flex-flow: row wrap; margin: 0.1rem 1rem 0.1rem;
+  
+}
+
+
 @media screen and (min-width: 800px) {
   .main {
     width: 100%;
