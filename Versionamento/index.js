@@ -212,7 +212,7 @@ console.log(nomes);
 
   cadastros.appendChild(el);
 
-  nome.value = ""; // Limpa o campo nome
+  nome.value = "Maurício"; // Limpa o campo nome
   cpf.value = ""; // Limpa o campo CPF
  }
 
