@@ -50,6 +50,13 @@ ul {
 .main {
 }
 
+@media screen and (min-width: 800px) {
+  .main {
+    width: 50%;
+  }
+}
+
+
 .footer {
  background: var(--verde);
  border-radius: 0.5rem;
