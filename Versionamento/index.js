@@ -142,6 +142,8 @@ function mostrarResultado(mensagem, valido) {
    inicio: dataInicioValue,
    fim: dataFinalValue
  };
+ 
+ let cad = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
 
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
  
