@@ -8,7 +8,7 @@ const inputSec = document.querySelector("#inputSec").value;
 const btnOkSenha = document.querySelector("#btnOkSenha");
 
 btnOkSenha.addEventListener("click",  () => {
-  if (inputSec == "ultra10") {
+  if (inputSec.value == "ultra10") {
     boxSenha.classList.remove("show");
   }
 });
