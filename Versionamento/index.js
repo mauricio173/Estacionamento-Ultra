@@ -164,6 +164,7 @@ function mostrarResultado(mensagem, valido) {
 console.log(itemTexto);
 console.log(item.textContent);
 console.log(nomes);
+console.log(nomeValue);
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
