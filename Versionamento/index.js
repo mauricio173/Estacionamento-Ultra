@@ -4,7 +4,7 @@ const btnSec = document.querySelector("#btnSec");
   });
   
 const boxSenha = document.querySelector("#offcanvasExample");
-const inputSec = document.querySelector("#inputSec").value;
+const inputSec = document.querySelector("#inputSec");
 const btnOkSenha = document.querySelector("#btnOkSenha");
 
 btnOkSenha.addEventListener("click",  () => {
