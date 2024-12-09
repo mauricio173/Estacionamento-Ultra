@@ -138,7 +138,9 @@ function mostrarResultado(mensagem, valido) {
  
  let registro = {
    cpf: cpfValue,
-   nome: nomeValue,
+   nome: nomeValue.normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "")
+   .trim(),
    inicio: dataInicioValue,
    fim: dataFinalValue
  };
