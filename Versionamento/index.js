@@ -206,7 +206,7 @@ function mostrarResultado(mensagem, valido) {
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
    invalido.style = "visibility: hidden;";
-  }, 4000);
+  }, 3500);
 
   cadastros.appendChild(el);
 
