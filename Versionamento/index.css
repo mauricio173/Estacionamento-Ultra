@@ -54,6 +54,12 @@ ul {
   .main {
     width: 100%;
   }
+  
+  .registration-container {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 50vw;
+  }
 }
 
 
