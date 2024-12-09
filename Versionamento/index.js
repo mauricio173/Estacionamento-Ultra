@@ -162,6 +162,7 @@ function mostrarResultado(mensagem, valido) {
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
 console.log(itemTexto);
+console.log(itemTexto.textContent);
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
