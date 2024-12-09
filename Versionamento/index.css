@@ -60,13 +60,13 @@ ul {
  margin: 0.1rem 1rem 0.1rem;
 }
 
-.marca p {
+.marca p:nth-child(2) {
  display: flex;
  align-items: center;
  justify-content: flex-start;
  text-align: center;
  flex-flow: row wrap;
- padding-top: 20px;
+ padding-top: 7px;
 }
 
 @media screen and (min-width: 800px) {
