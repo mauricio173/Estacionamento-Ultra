@@ -165,6 +165,7 @@ console.log(itemTexto + " itemTexto");
 console.log(item.textContent + " item.textContent");
 console.log(nomes + " nomes");
 console.log(nomeValue + " nomeValue");
+console.log(itens + " itens");
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
