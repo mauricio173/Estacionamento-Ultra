@@ -6,11 +6,12 @@ const btnSec = document.querySelector("#btnSec");
 const boxSenha = document.querySelector("#offcanvasExample");
 const inputSec = document.querySelector("#inputSec");
 const btnOkSenha = document.querySelector("#btnOkSenha");
+const btnClose = document.querySelector(".btn-close");
 
 btnOkSenha.addEventListener("click",  () => {
   if (inputSec.value == "ultra10") {
     console.log(inputSec.value);
-    boxSenha.classList.remove("show");
+    btnClose.click();
   }
 });
 
