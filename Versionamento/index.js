@@ -335,7 +335,3 @@ document.querySelector("#cadastros").addEventListener("click", event => {
  }
 });
 
-const btnSec = document.querySelector("#btnSec");
-  document.addEventListener("DOMContentLoaded", () => {
-    btnSec.click();
-  });
