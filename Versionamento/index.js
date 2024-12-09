@@ -143,7 +143,10 @@ function mostrarResultado(mensagem, valido) {
    fim: dataFinalValue
  };
  
- let cad = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
+ let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
+
+console.log(registro);
+console.log(cad);
 
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
  
