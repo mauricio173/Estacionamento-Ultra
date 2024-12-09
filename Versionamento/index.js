@@ -2,6 +2,8 @@ const btnSec = document.querySelector("#btnSec");
   document.addEventListener("DOMContentLoaded", () => {
     //btnSec.click();
   });
+  
+const boxSenha = document.querySelector("#offcanvasExample");
 
 const nome = document.querySelector("#nome");
 const cpf = document.querySelector("#cpf");
