@@ -86,7 +86,10 @@ ul {
   z-index: 1000;
   transform: translate(-50%, -50%);
   width: 50vw;
-  
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  justify-content: space-around;
   
 }
 
