@@ -202,10 +202,10 @@ function mostrarResultado(mensagem, valido) {
    .trim();
   el.style.color = "#A44378"; // roxo CPF válido
 
-  invalido.style = "display: block; color: #28abab"; // verde
+  invalido.style = "visibility: visible; color: #28abab"; // verde
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
-   invalido.style = "display: none";
+   invalido.style = "visibility: hidden;";
   }, 4000);
 
   cadastros.appendChild(el);
