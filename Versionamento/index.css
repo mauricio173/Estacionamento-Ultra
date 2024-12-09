@@ -121,7 +121,7 @@ ul {
  padding-top: 7px;
 }
 
-/* @media screen and (min-width: 800px) {
+ @media screen and (min-width: 800px) {
  .main {
   width: 100%;
  }
@@ -131,7 +131,7 @@ ul {
   top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50vw;
+  width: 30vw;
  }
  .marca {
     position: absolute;
@@ -140,7 +140,7 @@ ul {
   transform: translate(-50%, -50%);
  }
  
-} */
+} 
 
 .footer {
  background: var(--verde);
