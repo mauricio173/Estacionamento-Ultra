@@ -4,6 +4,8 @@ const btnSec = document.querySelector("#btnSec");
   });
   
 const boxSenha = document.querySelector("#offcanvasExample");
+const inputSec = document.querySelector("#inputSec");
+
 
 const nome = document.querySelector("#nome");
 const cpf = document.querySelector("#cpf");
