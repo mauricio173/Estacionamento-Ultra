@@ -80,12 +80,7 @@ ul {
 
 .containerSec {
   
-  position: relative;
-  top: 50%;
-  left: 50%;
-  z-index: 1000;
-  transform: translate(-50%, -50%);
-  width: 50vw;
+  
   display: flex;
   align-items: center;
   flex-flow: column wrap;
