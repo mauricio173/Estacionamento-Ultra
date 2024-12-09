@@ -55,6 +55,11 @@ ul {
   
 }
 
+.marca p {
+  display: flex; align-items: center; justify-content: flex-start; text-align: center; flex-flow: row wrap; padding-top: 7px;
+  
+}
+
 
 @media screen and (min-width: 800px) {
   .main {
