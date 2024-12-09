@@ -65,6 +65,19 @@ ul {
   height: 17.5px;
 }
 
+.boxSec {
+  position: absolute;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: var(--verde);
+  opacity: 0.7;
+  
+}
+
+
 
 .marca p:nth-child(2) {
  display: flex;
