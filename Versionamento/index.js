@@ -10,7 +10,7 @@ const btnClose = document.querySelector(".btn-close");
 
 btnOkSenha.addEventListener("click",  () => {
   if (inputSec.value == "ultra10") {
-    console.log(inputSec.value);
+    
     btnClose.click();
   }
 });
