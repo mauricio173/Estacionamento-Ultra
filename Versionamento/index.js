@@ -1,3 +1,8 @@
+const btnSec = document.querySelector("#btnSec");
+  document.addEventListener("DOMContentLoaded", () => {
+    btnSec.click();
+  });
+
 const nome = document.querySelector("#nome");
 const cpf = document.querySelector("#cpf");
 const dataInicio = document.querySelector("#dataInicio");
