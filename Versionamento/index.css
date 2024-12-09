@@ -4,7 +4,7 @@
  margin: 0;
  padding: 0;
  box-sizing: border-box;
- --dark: #181818dd;
+ --preto: #181818dd;
  --white: #fdfdfd;
  --red: #f9004d;
  --azulP: #05465d;
@@ -72,7 +72,7 @@ ul {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: var(--verde);
+  background: var(--preto);
   opacity: 0.9;
   
 }
