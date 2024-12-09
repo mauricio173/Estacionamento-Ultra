@@ -52,7 +52,7 @@ ul {
 
 @media screen and (min-width: 800px) {
   .main {
-    width: 50%;
+    width: 100%;
   }
 }
 
