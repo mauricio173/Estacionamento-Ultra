@@ -66,6 +66,8 @@ ul {
 }
 
 .boxSec {
+  display: flex;
+  flex-wrap: wrap;
   position: absolute;
   z-index: 999;
   top: 0;
