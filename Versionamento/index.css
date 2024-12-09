@@ -93,6 +93,17 @@ ul {
   
 }
 
+.containerSec label {
+  
+  width: 50%;
+ 
+  display: flex;
+  align-items: center;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  
+}
+
 
 
 
