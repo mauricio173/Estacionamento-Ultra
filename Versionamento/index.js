@@ -202,7 +202,7 @@ function mostrarResultado(mensagem, valido) {
    .trim();
   el.style.color = "#A44378"; // roxo CPF válido
 
-  invalido.style = "visibility: visible; color: #28abab; font-size: 10px"; // verde
+  invalido.style = "visibility: visible; font-size: 10px; color: #28abab"; // verde
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
    invalido.style = "visibility: hidden;";
@@ -217,10 +217,10 @@ function mostrarResultado(mensagem, valido) {
  // Exibe mensagem de CPF inválido
  if (!valido) {
   const invalido = document.querySelector("#invalido");
-  invalido.style = "display: block; color: red";
+  invalido.style = "visibility: visible; font-size: 10px; color: red";
   invalido.innerHTML = "CPF inválido";
   setTimeout(function () {
-   invalido.style = "display: none";
+   invalido.style = "visibility: hidden";
   }, 4000);
  }
 }
@@ -310,10 +310,10 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   navigator.clipboard
    .writeText(textoCompleto)
    .then(() => {
-    invalido.style = "display: block; color: #28abab";
+    invalido.style = "visibility: visible; font-size: 10px; color: #28abab";
     invalido.innerHTML = "CPF cadastrado com sucesso";
     setTimeout(function () {
-     invalido.style = "display: none";
+     invalido.style = "visibility: hidden";
     }, 4000);
     /* 
        console.log("Texto copiado para a área de transferência:\n" + textoCompleto);
