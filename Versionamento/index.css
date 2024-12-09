@@ -82,6 +82,7 @@ ul {
   position: relative;
   top: 20%;
   left: 50%;
+  z-index: 1000;
   transform: translate(-50%, -50%);
   width: 50vw;
   
