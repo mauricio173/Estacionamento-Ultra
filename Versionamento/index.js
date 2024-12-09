@@ -161,10 +161,10 @@ function mostrarResultado(mensagem, valido) {
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
-console.log(itemTexto);
-console.log(item.textContent);
-console.log(nomes);
-console.log(nomeValue);
+console.log(itemTexto + " itemTexto");
+console.log(item.textContent + " item.textContent");
+console.log(nomes + " nomes");
+console.log(nomeValue + " nomeValue");
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
