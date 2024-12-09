@@ -66,8 +66,7 @@ ul {
 }
 
 .boxSec {
-  display: flex;
-  flex-wrap: wrap;
+  
   position: absolute;
   z-index: 999;
   top: 0;
@@ -82,11 +81,12 @@ ul {
 .containerSec {
   
   position: relative;
-  top: 20%;
+  top: 50%;
   left: 50%;
   z-index: 1000;
   transform: translate(-50%, -50%);
   width: 50vw;
+  
   
 }
 
