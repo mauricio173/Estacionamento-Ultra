@@ -4,8 +4,14 @@ const btnSec = document.querySelector("#btnSec");
   });
   
 const boxSenha = document.querySelector("#offcanvasExample");
-const inputSec = document.querySelector("#inputSec");
+const inputSec = document.querySelector("#inputSec").value;
+const btnOkSenha = document.querySelector("#btnOkSenha");
 
+btnOkSenha.addEventListener("click",  () => {
+  if (inputSec == "ultra10") {
+    boxSenha.classList.remove("show");
+  }
+});
 
 const nome = document.querySelector("#nome");
 const cpf = document.querySelector("#cpf");
