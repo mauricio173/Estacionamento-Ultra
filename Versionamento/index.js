@@ -135,6 +135,13 @@ function mostrarResultado(mensagem, valido) {
  const nomeValue = nome.value.toUpperCase().trim();
  const dataInicioValue = dataInicio.value;
  const dataFinalValue = dataFinal.value;
+ 
+ let registro = {
+   cpf: cpfValue,
+   nome: nomeValue,
+   inicio: dataInicioValue,
+   fim: dataFinalValue
+ };
 
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
  
