@@ -121,6 +121,12 @@ ul {
  padding-top: 7px;
 }
 
+#offcanvasExample {
+width: 100vw;
+height: 100vh;
+}
+
+
  @media screen and (min-width: 800px) {
  .main {
   width: 100%;
