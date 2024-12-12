@@ -234,8 +234,7 @@ console.log(resultados);
     invalido.innerHTML = "Nome já inserido.";
    console.log("nomeValue == resultado: ", resultado);
   } else if (nomeValue !== resultado) {
-   valido = true;
-   itemJaInserido = false;
+   
    console.log("!nomeValue == resultado: ", resultado);
   }
 
