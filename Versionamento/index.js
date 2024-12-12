@@ -258,7 +258,7 @@ function mostrarResultado(mensagem, valido) {
    .replace(/[\u0300-\u036f]/g, "");
   // console.log(nomeValue + " : " + nomes);
 
-  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue, 12)) {
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue, 12) == resultado) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
