@@ -260,13 +260,13 @@ console.log(resultados);
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
-    console.log(" itemTexto.includes(cpfValue) ");
+    console.log(cpfValue);
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
    }
 
    if (itemTexto.includes(nomeValue, 12)) {
-    console.log("  itemTexto.includes(resultado) " + nomeValue);
+    console.log(nomeValue);
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
    }
