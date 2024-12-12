@@ -513,7 +513,7 @@ document.querySelector("#cadastros").addEventListener("click", event => {
     invalido.innerHTML = "Itens copiados com sucesso!";
     setTimeout(function () {
      invalido.style = "visibility: hidden";
-    }, 4000);
+    }, 5000);
     /* 
        console.log("Texto copiado para a área de transferência:\n" + textoCompleto);
        */
