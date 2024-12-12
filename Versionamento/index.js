@@ -376,14 +376,14 @@ function mostrarResultado(mensagem, valido) {
       invalido.innerHTML = "Nome já inserido!";
     }
 
-    if (itemJaInserido) {
-      // Indica visualmente o item duplicado
-      item.style.color = "#28abab";
-      setTimeout(() => {
-        invalido.style = "display: none";
-        item.style.color = "#A44378"; // Retorna a cor padrão
-      }, 4000);
-    }
+if (itemJaInserido) {
+  console.log(`Item duplicado encontrado: ${item.textContent}`);
+  item.style.color = "#28abab"; // Muda a cor temporariamente
+  setTimeout(() => {
+    item.style.color = "#A44378"; // Retorna à cor padrão
+  }, 4000);
+}
+
   });
 
   if (itemJaInserido) {
