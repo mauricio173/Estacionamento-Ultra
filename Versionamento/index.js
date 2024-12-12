@@ -159,7 +159,7 @@ function verificar() {
 
  nome.value = "Maurício Marques"; // Limpa o campo nome
   cpf.value = "02175203085"; // Limpa o campo CPF
-function mostrarResultado(mensagem, valido) {
+function mostrarResultados(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
 
  const cpfValue = cpf.value.replace(/\D/g, "");
@@ -325,6 +325,99 @@ function mostrarResultado(mensagem, valido) {
   }, 4000);
  }
 }
+
+function mostrarResultado(mensagem, valido) {
+  const cadastros = document.querySelector("#cadastros");
+  const invalido = document.querySelector("#invalido");
+
+  // Normaliza os valores de entrada
+  const cpfValue = cpf.value.replace(/\D/g, ""); // Remove caracteres não numéricos
+  const nomeValue = nome.value
+    .toUpperCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .trim(); // Remove acentos e espaços
+
+  const dataInicioValue = dataInicio.value;
+  const dataFinalValue = dataFinal.value;
+
+  if (nomeValue === "" || nomeValue.startsWith(" ")) {
+    // Verifica se o nome está vazio ou começa com espaço
+    invalido.style = "display: block; color: black";
+    invalido.innerHTML = "Nome inválido!";
+    nome.value = ""; // Limpa o campo nome
+    setTimeout(() => (invalido.style = "display: none"), 4000);
+    return;
+  }
+
+  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
+  const itens = cadastros.querySelectorAll("p");
+
+  // Verifica se o CPF ou nome já estão na lista
+  let itemJaInserido = false;
+
+  itens.forEach((item) => {
+    const itemTexto = item.textContent
+      .toUpperCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, ""); // Normaliza texto existente na lista
+
+    if (itemTexto.includes(cpfValue)) {
+      // CPF duplicado
+      itemJaInserido = true;
+      invalido.style = "display: block; color: black";
+      invalido.innerHTML = "CPF já inserido!";
+    } else if (itemTexto.includes(nomeValue)) {
+      // Nome duplicado
+      itemJaInserido = true;
+      invalido.style = "display: block; color: black";
+      invalido.innerHTML = "Nome já inserido!";
+    }
+
+    if (itemJaInserido) {
+      // Indica visualmente o item duplicado
+      item.style.color = "#28abab";
+      setTimeout(() => {
+        invalido.style = "display: none";
+        item.style.color = "#A44378"; // Retorna a cor padrão
+      }, 4000);
+    }
+  });
+
+  if (itemJaInserido) {
+    // Interrompe a execução se já existe duplicidade
+    cpf.value = ""; // Limpa o campo CPF
+    nome.value = ""; // Limpa o campo nome
+    return;
+  }
+
+  // Adiciona um novo registro se válido
+  if (valido && nome.value.trim() !== "") {
+    const el = document.createElement("p");
+    el.innerHTML = texto
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .trim();
+    el.style.color = "#A44378"; // Adiciona cor padrão
+
+    cadastros.appendChild(el);
+
+    // Mensagem de sucesso
+    invalido.style = "display: block; color: #28abab";
+    invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
+    setTimeout(() => (invalido.style = "display: none"), 4000);
+
+    // Limpa os campos após cadastro
+    nome.value = "";
+    cpf.value = "";
+  } else if (!valido) {
+    // Exibe mensagem de CPF inválido
+    invalido.style = "display: block; color: red";
+    invalido.innerHTML = "CPF inválido!";
+    setTimeout(() => (invalido.style = "display: none"), 4000);
+  }
+}
+
 
 /*function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
