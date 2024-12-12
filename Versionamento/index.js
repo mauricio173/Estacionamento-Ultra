@@ -167,19 +167,6 @@ function mostrarResultado(mensagem, valido) {
   }, 4000);
    return;
  }
-/* if (cpfValue.trim() == "" || cpfValue.startsWith(" ")) {
-   invalido.style = "display: block; color: black";
-
-   invalido.innerHTML = `
-   CPF Vazio!
-   `;
-   
-  setTimeout(function () {
-   invalido.style = "display: none";
-   cpf.value = "";
-  }, 4000);
-   return;
- }*/
 
  // Verifica se o CPF ou o nome já existem na lista
  const itens = cadastros.querySelectorAll("p");
@@ -200,7 +187,12 @@ const endIndex = substring.indexOf(";"); // Encontra a posição do próximo ";"
 // Captura o texto até o próximo ";"
 const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
 
+if (nomeValue == resultado) {
+console.log("nomeValue == resultado: ", resultado);
+} else {
 console.log("Resultado:", resultado);
+  
+}
  
   const nomes = nomeValue
    .toUpperCase()
