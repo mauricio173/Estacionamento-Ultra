@@ -43,7 +43,7 @@ dataFinal.value = formatarData(dataFutura);
 btnEnviar.addEventListener("click", event => {
  event.preventDefault();
  validarCPF();
- verificar();
+// verificar();
 });
 
 function validarCPF() {
@@ -154,7 +154,7 @@ function verificar() {
 
  let cad = `${registros.cpf};${registros.nome};${registros.inicio};${registros.fim};1;${registros.cpf}`;
  
- console.log(cadastrado.innerHTML);
+ console.log(cadastrado);
 }
 
 function mostrarResultado(mensagem, valido) {
