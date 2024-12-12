@@ -254,8 +254,8 @@ function mostrarResultado(mensagem, valido) {
   setTimeout(function () {
    invalido.style = "display: none";
   }, 4000);
-  cpf.value = "02175203085"; // Limpa o campo CPF
-  nome.value = "Maurício Marques"; // Limpa o campo nome
+  // cpf.value = "02175203085"; // Limpa o campo CPF
+  // nome.value = "Maurício Marques"; // Limpa o campo nome
   return;
  }
 
