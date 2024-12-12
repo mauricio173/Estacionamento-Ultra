@@ -130,7 +130,8 @@ const texArea = document.querySelector("#texArea");
 
 function verificar() {
   const cadastro = document.querySelector("#cadastros");
-  const cadastrado = document.querySelectorAll("#cadastros p");
+  const cadastrado = cadastro.querySelectorAll("p");
+  //const cadastrado = document.querySelectorAll("#cadastros p");
   
   const cpfValue = cpf.value.replace(/\D/g, "");
  const nomeValue = nome.value
