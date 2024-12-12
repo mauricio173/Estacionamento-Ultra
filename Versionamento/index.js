@@ -456,7 +456,9 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   // Copia o texto de todos os <p> do container
   const todosElementos = Array.from(document.querySelectorAll("#cadastros p"));
   const textoCompleto = todosElementos.map(el => el.innerText).join("\n");
+lista.innerHTML = `
 
+`;
   todosElementos.forEach((item, index) => {
     let p = document.createElement("p");
     p.textContent = item.innerText;
