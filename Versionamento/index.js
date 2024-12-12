@@ -21,6 +21,7 @@ const dataFinal = document.querySelector("#dataFinal");
 const cadastrar = document.querySelector("#cadastrar");
 const btnEnviar = document.querySelector("#btnEnviar");
 const invalido = document.querySelector("#invalido");
+const lista = document.querySelector(".lista");
 const hoje = new Date();
 const dataAtual = hoje.getFullYear() + "-" + (hoje.getMonth() + 1) + "-" + (hoje.getDate() < 10 ? "0" + hoje.getDate() : hoje.getDate());
 
@@ -329,6 +330,7 @@ function mostrarResultados(mensagem, valido) {
 function mostrarResultado(mensagem, valido) {
   const cadastros = document.querySelector("#cadastros");
   const invalido = document.querySelector("#invalido");
+  
 
   // Normaliza os valores de entrada
   const cpfValue = cpf.value.replace(/\D/g, ""); // Remove caracteres não numéricos
