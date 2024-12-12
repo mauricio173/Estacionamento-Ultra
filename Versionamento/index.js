@@ -185,16 +185,16 @@ function mostrarResultado(mensagem, valido) {
  
 
  itens.forEach(item => {
- console.log(item.textContent);
   const itemTexto = item.textContent
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
+ console.log(itemTexto);
   const nomes = nomeValue
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
- console.log(nomeValue + " : " + nomes);
+// console.log(nomeValue + " : " + nomes);
 
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
