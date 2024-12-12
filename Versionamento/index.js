@@ -462,7 +462,7 @@ lista.innerHTML = `
   todosElementos.forEach((item, index) => {
     let p = document.createElement("p");
     p.textContent = item.innerText;
-    lista.appendChild(p);
+    // lista.appendChild(p);
     
    console.log(item.innerText);
   });
