@@ -204,6 +204,7 @@ function mostrarResultado(mensagem, valido) {
   // console.log(nomeValue + " : " + nomes);
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
+    console.log(" itemTexto.includes(cpfValue) || itemTexto.includes(nomes) ");
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
