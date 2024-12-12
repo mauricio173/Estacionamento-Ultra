@@ -213,7 +213,7 @@ function mostrarResultado(mensagem, valido) {
     invalido.innerHTML = "CPF já inserido.";
    }
 
-   if (itemTexto.includes(nomeValue)) {
+   if (resultado.includes(nomeValue)) {
      console.log(nomeValue);
     console.log("  itemTexto.includes(nomeValue) ");
     invalido.style = "display: block; color: black";
