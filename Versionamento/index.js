@@ -195,6 +195,7 @@ function mostrarResultado(mensagem, valido) {
    valido = true;
    console.log("!nomeValue == resultado: ", resultado);
   }
+ 
   const nomes = nomeValue
    .toUpperCase()
    .normalize("NFD")
