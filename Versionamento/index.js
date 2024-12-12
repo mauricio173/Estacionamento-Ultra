@@ -214,11 +214,11 @@ function mostrarResultado(mensagem, valido) {
    itemJaInserido = true;
      invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
-   console.log("nomeValue == resultado: ", resultado);
+   console.log("nomeValue == resultados: ", resultados);
   } else if (cpfValue !== resultados) {
    valido = true;
    itemJaInserido = false;
-   console.log("!cpfValue == resultado: ", resultado);
+   console.log("!cpfValue == resultados: ", resultados);
   }
  
   const nomes = nomeValue
