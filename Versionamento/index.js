@@ -256,7 +256,7 @@ console.log(resultados);
    .replace(/[\u0300-\u036f]/g, "");
   // console.log(nomeValue + " : " + nomes);
 
-  if (itemTexto.includes(cpfValue) || itemTexto.includes(resultado, 12)) {
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(resultado)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
@@ -265,7 +265,7 @@ console.log(resultados);
     invalido.innerHTML = "CPF já inserido.";
    }
 
-   if (itemTexto.includes(resultado, 12)) {
+   if (itemTexto.includes(resultado)) {
     console.log(nomeValue);
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
