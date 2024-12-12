@@ -192,7 +192,7 @@ function mostrarResultado(mensagem, valido) {
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
- console.log(nomeValue == nomes);
+ console.log(nomeValue + " : " + nomes);
 if (nomeValue == nomes) {
 }
 console.log(nomes + " nomes");
