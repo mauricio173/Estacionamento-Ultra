@@ -42,6 +42,7 @@ dataFinal.value = formatarData(dataFutura);
 // cpf.value = "02175203085";
 btnEnviar.addEventListener("click", event => {
  event.preventDefault();
+ verificar();
  validarCPF();
 });
 
