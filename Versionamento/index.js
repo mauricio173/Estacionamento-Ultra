@@ -193,6 +193,20 @@ function mostrarResultado(mensagem, valido) {
    console.log("nomeValue == resultado: ", resultado);
   } else if (nomeValue !== resultado) {
    valido = true;
+   const el = document.createElement("p");
+  el.innerHTML = texto
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "")
+   .trim();
+  el.style.color = "#A44378"; // roxo CPF válido
+
+  invalido.style = "visibility: visible; font-size: 10px; color: #28abab"; // verde
+  invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
+  setTimeout(function () {
+   invalido.style = "visibility: hidden;";
+  }, 3500);
+
+  cadastros.appendChild(el);
    console.log("!nomeValue == resultado: ", resultado);
   }
  
@@ -231,7 +245,7 @@ function mostrarResultado(mensagem, valido) {
  }
 
  // Adiciona um novo CPF válido na lista
- if (valido && nome.value.trim() !== "") {
+/* if (valido && nome.value.trim() !== "") {
   const nomeCad = nome.value
    .toUpperCase()
    .normalize("NFD")
@@ -253,7 +267,7 @@ function mostrarResultado(mensagem, valido) {
 
   nome.value = "Maurício Marques"; // Limpa o campo nome
   cpf.value = ""; // Limpa o campo CPF
- }
+ }*/
 
  // Exibe mensagem de CPF inválido
  if (!valido) {
