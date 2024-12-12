@@ -182,6 +182,8 @@ function mostrarResultado(mensagem, valido) {
  // Verifica se o CPF ou o nome já existem na lista
  const itens = cadastros.querySelectorAll("p");
  let itemJaInserido = false;
+ 
+ console.log(itens.textContent);
 
  itens.forEach(item => {
   const itemTexto = item.textContent
