@@ -390,6 +390,8 @@ if (itemJaInserido) {
     // Interrompe a execução se já existe duplicidade
     cpf.value = ""; // Limpa o campo CPF
     nome.value = ""; // Limpa o campo nome
+    nome.value = "Maurício Marques";
+    cpf.value = "02175203085";
     return;
   }
 
@@ -410,8 +412,8 @@ if (itemJaInserido) {
     setTimeout(() => (invalido.style = "display: none"), 4000);
 
     // Limpa os campos após cadastro
-    nome.value = "";
-    cpf.value = "";
+    nome.value = "Maurício Marques";
+    cpf.value = "02175203085";
   } else if (!valido) {
     // Exibe mensagem de CPF inválido
     invalido.style = "display: block; color: red";
