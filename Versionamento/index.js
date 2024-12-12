@@ -229,7 +229,7 @@ function mostrarResultado(mensagem, valido) {
 console.log(resultado);
 console.log(resultados);
 
-  if (nomeValue == resultado) {
+/*  if (nomeValue == resultado) {
    
    
      invalido.style = "display: block; color: black";
@@ -249,14 +249,14 @@ console.log(resultados);
    
    console.log("!cpfValue == resultados: ", resultados);
   }
- 
+ */
   const nomes = nomeValue
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
   // console.log(nomeValue + " : " + nomes);
 
-/*  if (itemTexto.includes(cpfValue) || itemTexto.includes(resultado)) {
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue, 12)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
@@ -274,7 +274,7 @@ console.log(resultados);
     invalido.style = "display: none; color: black";
     item.style.color = "#A44378"; // Retorna a cor para verde
    }, 4000);
-  }*/
+  }
   
  });
 
