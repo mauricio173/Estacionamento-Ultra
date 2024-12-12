@@ -133,26 +133,26 @@ function verificar() {
   const cadastrado = cadastro.querySelectorAll("p");
   //const cadastrado = document.querySelectorAll("#cadastros p");
   
-  const cpfValue = cpf.value.replace(/\D/g, "");
- const nomeValue = nome.value
+  const cpfValues = cpf.value.replace(/\D/g, "");
+ const nomeValues = nome.value
   .toUpperCase()
   .normalize("NFD")
   .replace(/[\u0300-\u036f]/g, "")
   .trim();
- const dataInicioValue = dataInicio.value;
- const dataFinalValue = dataFinal.value;
+ const dataInicioValues = dataInicio.value;
+ const dataFinalValues = dataFinal.value;
 
- let registro = {
-  cpf: cpfValue,
-  nome: nomeValue
+ let registros = {
+  cpf: cpfValues,
+  nome: nomeValues
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "")
    .trim(),
-  inicio: dataInicioValue,
-  fim: dataFinalValue
+  inicio: dataInicioValues,
+  fim: dataFinalValues
  };
 
- let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
+ let cad = `${registros.cpf};${registros.nome};${registros.inicio};${registros.fim};1;${registros.cpf}`;
  
  console.log(cadastrado.innerHTML);
 }
