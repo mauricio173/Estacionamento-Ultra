@@ -198,8 +198,7 @@ function mostrarResultado(mensagem, valido) {
 
 
   if (nomeValue == resultado) {
-   itemJaInserido = true;
-   valido = false;
+   
    
      invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
