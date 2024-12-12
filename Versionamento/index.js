@@ -188,10 +188,7 @@ console.log(cad);
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
-  const nomes = nomeValue
-   .toUpperCase()
-   .normalize("NFD")
-   .replace(/[\u0300-\u036f]/g, "");
+  
 
 console.log(nomes + " nomes");
 
@@ -227,7 +224,10 @@ console.log(nomes + " nomes");
 
  // Adiciona um novo CPF válido na lista
  if (valido && nome.value.trim() !== "") {
-  
+  const nomeCad = nomeValue
+   .toUpperCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "");
   const el = document.createElement("p");
   el.innerHTML = texto
    .normalize("NFD")
