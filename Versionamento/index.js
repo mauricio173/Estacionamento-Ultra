@@ -217,8 +217,8 @@ function mostrarResultado(mensagem, valido) {
   // Captura o texto até o próximo ";"
   const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
   
-  
-  const substrings = itemTexto.slice(0); // Pega a substring a partir do índice 12
+   const startIndexs = 0; // Índice inicial para percorrer
+  const substrings = itemTexto.slice(startIndexs); // Pega a substring a partir do índice 12
   const endIndexs = substrings.indexOf(";"); // Encontra a posição do próximo ";"
 
   // Captura o texto até o próximo ";"
