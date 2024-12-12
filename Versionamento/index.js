@@ -64,7 +64,7 @@ function validarCPF() {
   setTimeout(function () {
    invalido.style = "display: none";
    cpf.value = "";
-  }, 4000);
+  }, 5000);
   return false;
  }
 
@@ -80,7 +80,7 @@ function validarCPF() {
   setTimeout(function () {
    invalido.style = "display: none";
    cpf.value = "";
-  }, 4000);
+  }, 5000);
   return false;
  }
 
@@ -96,7 +96,7 @@ function validarCPF() {
   setTimeout(function () {
    invalido.style = "display: none";
    cpf.value = "";
-  }, 4000);
+  }, 5000);
   return false;
  }
 
@@ -198,7 +198,7 @@ function mostrarResultados(mensagem, valido) {
   nome.value = "";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 4000);
+  }, 5000);
   return;
  }
 
@@ -275,7 +275,7 @@ function mostrarResultados(mensagem, valido) {
    setTimeout(function () {
     invalido.style = "display: none; color: black";
     item.style.color = "#A44378"; // Retorna a cor para verde
-   }, 4000);
+   }, 5000);
   }
   
  });
@@ -284,7 +284,7 @@ function mostrarResultados(mensagem, valido) {
    console.log("itemJaInserido");
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 4000);
+  }, 5000);
   // cpf.value = "02175203085"; // Limpa o campo CPF
   // nome.value = "Maurício Marques"; // Limpa o campo nome
   return;
@@ -307,7 +307,7 @@ function mostrarResultados(mensagem, valido) {
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
    invalido.style = "visibility: hidden;";
-  }, 3500);
+  }, 5000);
 
   cadastros.appendChild(el);
 
@@ -322,7 +322,7 @@ function mostrarResultados(mensagem, valido) {
   invalido.innerHTML = "CPF inválido";
   setTimeout(function () {
    invalido.style = "visibility: hidden";
-  }, 4000);
+  }, 5000);
  }
 }
 
@@ -346,7 +346,7 @@ function mostrarResultado(mensagem, valido) {
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome inválido!";
     nome.value = ""; // Limpa o campo nome
-    setTimeout(() => (invalido.style = "display: none"), 4000);
+    setTimeout(() => (invalido.style = "display: none"), 5000);
     return;
   }
 
@@ -381,7 +381,7 @@ if (itemJaInserido) {
   item.style.color = "#28abab"; // Muda a cor temporariamente
   setTimeout(() => {
     item.style.color = "#A44378"; // Retorna à cor padrão
-  }, 4000);
+  }, 5000);
 }
 
   });
@@ -409,7 +409,7 @@ if (itemJaInserido) {
     // Mensagem de sucesso
     invalido.style = "display: block; color: #28abab";
     invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
-    setTimeout(() => (invalido.style = "display: none"), 4000);
+    setTimeout(() => (invalido.style = "display: none"), 5000);
 
     // Limpa os campos após cadastro
     nome.value = "Maurício Marques";
@@ -418,7 +418,7 @@ if (itemJaInserido) {
     // Exibe mensagem de CPF inválido
     invalido.style = "display: block; color: red";
     invalido.innerHTML = "CPF inválido!";
-    setTimeout(() => (invalido.style = "display: none"), 4000);
+    setTimeout(() => (invalido.style = "display: none"), 5000);
   }
 }
 
@@ -443,7 +443,7 @@ if (itemJaInserido) {
 
    setTimeout(function () {
     item.style.color = "#28abab"; // Retorna a cor para verde
-   }, 4000);
+   }, 5000);
   }
  });
 
@@ -453,7 +453,7 @@ if (itemJaInserido) {
   invalido.innerHTML = "CPF já inserido e marcado.";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 4000);
+  }, 5000);
   cpf.value = ""; // Limpa o campo CPF
   return;
  }
@@ -475,7 +475,7 @@ if (itemJaInserido) {
   invalido.innerHTML = "CPF cadastrado com sucesso";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 4000);
+  }, 5000);
   
   cadastros.appendChild(el);
 
@@ -490,7 +490,7 @@ if (itemJaInserido) {
   invalido.innerHTML = "CPF inválido";
   setTimeout(function () {
    invalido.style = "display: none";
-  }, 4000);
+  }, 5000);
  }
 }*/
 
