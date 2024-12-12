@@ -514,9 +514,10 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   const textoCompleto = todosElementos.map(el => el.innerText).join("\n");
 
   todosElementos.forEach((item, index) => {
-    lista.innerHTML = `
-    ${item.innerText}
-    `;
+    let p = document.createElement("p");
+    p.textContent = item.innerText;
+    lista.appendChild(p);
+    
    console.log(item.innerText);
   });
 
