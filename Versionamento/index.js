@@ -191,9 +191,7 @@ if (nomeValue == resultado) {
 
 valido = false;
 console.log("nomeValue == resultado: ", resultado);
-return;
-}
-else if (nomeValue !== resultado) {
+} else if (nomeValue !== resultado) {
   valido = true;
 console.log("!nomeValue == resultado: ", resultado);
 } 
