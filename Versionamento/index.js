@@ -129,7 +129,7 @@ function validarDigitosVerificadores(cpf) {
 const texArea = document.querySelector("#texArea");
 
 function verificar() {
-  const cadastros = document.querySelector("#cadastros");
+  const cadastro = document.querySelector("#cadastros");
   const cadastrado = document.querySelectorAll("#cadastros p");
   
   const cpfValue = cpf.value.replace(/\D/g, "");
