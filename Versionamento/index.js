@@ -50,7 +50,11 @@ btnEnviar.addEventListener("click", event => {
 btnClear.addEventListener("click", event => {
  event.preventDefault();
  const cadastros = document.querySelector("#cadastros");
+ const lista = document.querySelector(".lista");
  cadastros.innerHTML = `
+ 
+ `;
+ lista.innerHTML = `
  
  `;
 // verificar();
