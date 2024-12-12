@@ -208,6 +208,18 @@ function mostrarResultado(mensagem, valido) {
    itemJaInserido = false;
    console.log("!nomeValue == resultado: ", resultado);
   }
+
+  if (cpfValue == resultados) {
+   valido = false;
+   itemJaInserido = true;
+     invalido.style = "display: block; color: black";
+    invalido.innerHTML = "CPF já inserido.";
+   console.log("nomeValue == resultado: ", resultado);
+  } else if (cpfValue !== resultados) {
+   valido = true;
+   itemJaInserido = false;
+   console.log("!cpfValue == resultado: ", resultado);
+  }
  
   const nomes = nomeValue
    .toUpperCase()
