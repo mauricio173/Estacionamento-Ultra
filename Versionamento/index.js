@@ -183,9 +183,9 @@ function mostrarResultado(mensagem, valido) {
  const itens = cadastros.querySelectorAll("p");
  let itemJaInserido = false;
  
- console.log(itens.textContent);
 
  itens.forEach(item => {
+ console.log(item.textContent);
   const itemTexto = item.textContent
    .toUpperCase()
    .normalize("NFD")
