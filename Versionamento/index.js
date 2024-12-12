@@ -195,7 +195,7 @@ console.log("nomeValue == resultado: ", resultado);
   valido = true;
 console.log("!nomeValue == resultado: ", resultado);
 } 
-  // const nomes = nomeValue.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+  const nomes = nomeValue.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 // console.log(nomeValue + " : " + nomes);
 
 
