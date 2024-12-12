@@ -265,7 +265,7 @@ console.log(resultados);
     invalido.innerHTML = "CPF já inserido.";
    }
 
-   if (itemTexto.includes(nomeValue)) {
+   if (itemTexto.includes(nomeValue, 12)) {
     console.log("  itemTexto.includes(resultado) " + nomeValue);
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
