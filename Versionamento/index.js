@@ -190,6 +190,16 @@ function mostrarResultado(mensagem, valido) {
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
  console.log(itemTexto);
+ 
+ const startIndex = 12; // Índice inicial para percorrer
+const substring = itemTexto.slice(startIndex); // Pega a substring a partir do índice 12
+const endIndex = substring.indexOf(";"); // Encontra a posição do próximo ";"
+
+// Captura o texto até o próximo ";"
+const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
+
+console.log("Resultado:", resultado);
+ 
   const nomes = nomeValue
    .toUpperCase()
    .normalize("NFD")
