@@ -224,7 +224,8 @@ function mostrarResultado(mensagem, valido) {
   // Captura o texto até o próximo ";"
   const resultados = endIndexs !== -1 ? substrings.slice(0, endIndexs) : substrings;
 
-
+console.log(resultado);
+console.log(resultados);
 
   if (nomeValue == resultado) {
    
