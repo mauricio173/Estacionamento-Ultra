@@ -256,7 +256,7 @@ console.log(resultados);
    .replace(/[\u0300-\u036f]/g, "");
   // console.log(nomeValue + " : " + nomes);
 
-  if (itemTexto.includes(cpfValue) || itemTexto.includes(resultado)) {
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue, 13)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
