@@ -126,7 +126,32 @@ function validarDigitosVerificadores(cpf) {
 }
 
 const texArea = document.querySelector("#texArea");
-nome.value = "Maurício Marques";
+
+function verificar() {
+  
+  
+  const cpfValue = cpf.value.replace(/\D/g, "");
+ const nomeValue = nome.value
+  .toUpperCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .trim();
+ const dataInicioValue = dataInicio.value;
+ const dataFinalValue = dataFinal.value;
+
+ let registro = {
+  cpf: cpfValue,
+  nome: nomeValue
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "")
+   .trim(),
+  inicio: dataInicioValue,
+  fim: dataFinalValue
+ };
+
+ let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
+}
+
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
 
