@@ -214,7 +214,7 @@ function mostrarResultado(mensagem, valido) {
    itemJaInserido = true;
      invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
-   console.log("nomeValue == resultados: ", resultados);
+   console.log("CPF == resultados: ", resultados);
   } else if (cpfValue !== resultados) {
    valido = true;
    itemJaInserido = false;
@@ -254,7 +254,7 @@ function mostrarResultado(mensagem, valido) {
   setTimeout(function () {
    invalido.style = "display: none";
   }, 4000);
-  cpf.value = ""; // Limpa o campo CPF
+  cpf.value = "02175203085"; // Limpa o campo CPF
   nome.value = "Maurício Marques"; // Limpa o campo nome
   return;
  }
