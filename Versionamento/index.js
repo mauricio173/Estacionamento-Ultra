@@ -231,7 +231,7 @@ function mostrarResultado(mensagem, valido) {
    invalido.style = "display: none";
   }, 4000);
   cpf.value = ""; // Limpa o campo CPF
-  nome.value = ""; // Limpa o campo nome
+  nome.value = "Maurício Marques"; // Limpa o campo nome
   return;
  }
 
