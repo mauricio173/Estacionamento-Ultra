@@ -258,7 +258,7 @@ function mostrarResultado(mensagem, valido) {
    .replace(/[\u0300-\u036f]/g, "");
   // console.log(nomeValue + " : " + nomes);
 
-  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue, 13) == resultado) {
+  if (itemTexto.includes(cpfValue) || itemTexto.includes(nomeValue) == resultado) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
@@ -267,7 +267,7 @@ function mostrarResultado(mensagem, valido) {
     invalido.innerHTML = "CPF já inserido.";
    }
 
-   if (itemTexto.includes(nomeValue, 13) == resultado) {
+   if (itemTexto.includes(nomeValue) == resultado) {
     console.log(nomeValue);
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
