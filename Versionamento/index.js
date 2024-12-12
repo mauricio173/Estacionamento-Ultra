@@ -147,8 +147,8 @@ function mostrarResultado(mensagem, valido) {
  
  let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
 
-console.log(registro);
-console.log(cad);
+// console.log(registro);
+// console.log(cad);
 
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
  
