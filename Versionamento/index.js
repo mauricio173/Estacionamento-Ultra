@@ -188,16 +188,14 @@ const endIndex = substring.indexOf(";"); // Encontra a posição do próximo ";"
 const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
 
 if (nomeValue == resultado) {
+valido = false;
 console.log("nomeValue == resultado: ", resultado);
 }
-if (nomeValue !== resultado) {
-  
+else if (nomeValue !== resultado) {
+  valido = true;
 console.log("!nomeValue == resultado: ", resultado);
 } 
-  const nomes = nomeValue
-   .toUpperCase()
-   .normalize("NFD")
-   .replace(/[\u0300-\u036f]/g, "");
+  // const nomes = nomeValue.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
 // console.log(nomeValue + " : " + nomes);
 
 
