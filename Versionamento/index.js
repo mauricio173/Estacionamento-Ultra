@@ -362,13 +362,15 @@ function mostrarResultado(mensagem, valido) {
       .normalize("NFD")
       .replace(/[\u0300-\u036f]/g, ""); // Normaliza texto existente na lista
 
-    if (itemTexto.includes(cpfValue)) {
-      // CPF duplicado
+    // Extrai o nome e CPF de cada item da lista
+    const [cpfItem, nomeItem] = itemTexto.split(";");
+
+    // Verifica duplicidade por CPF ou Nome
+    if (cpfItem === cpfValue) {
       itemJaInserido = true;
       invalido.style = "display: block; color: black";
       invalido.innerHTML = "CPF já inserido!";
-    } else if (itemTexto.includes(nomeValue)) {
-      // Nome duplicado
+    } else if (nomeItem === nomeValue) {
       itemJaInserido = true;
       invalido.style = "display: block; color: black";
       invalido.innerHTML = "Nome já inserido!";
@@ -417,6 +419,7 @@ function mostrarResultado(mensagem, valido) {
     setTimeout(() => (invalido.style = "display: none"), 4000);
   }
 }
+
 
 
 /*function mostrarResultado(mensagem, valido) {
