@@ -189,7 +189,7 @@ function mostrarResultado(mensagem, valido) {
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
- console.log(itemTexto);
+// console.log(itemTexto);
  
  const startIndex = 12; // Índice inicial para percorrer
 const substring = itemTexto.slice(startIndex); // Pega a substring a partir do índice 12
