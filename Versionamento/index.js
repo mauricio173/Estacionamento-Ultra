@@ -191,6 +191,8 @@ function mostrarResultado(mensagem, valido) {
   if (nomeValue == resultado) {
    valido = false;
    itemJaInserido = true;
+     invalido.style = "display: block; color: black";
+    invalido.innerHTML = "Nome já inserido.";
    console.log("nomeValue == resultado: ", resultado);
   } else if (nomeValue !== resultado) {
    valido = true;
@@ -204,7 +206,7 @@ function mostrarResultado(mensagem, valido) {
    .replace(/[\u0300-\u036f]/g, "");
   // console.log(nomeValue + " : " + nomes);
 
-  if (itemTexto.includes(cpfValue) || itemTexto.includes(resultado)) {
+/*  if (itemTexto.includes(cpfValue) || itemTexto.includes(resultado)) {
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
@@ -214,8 +216,7 @@ function mostrarResultado(mensagem, valido) {
    }
 
    if (itemTexto.includes(resultado)) {
-     console.log(nomeValue);
-    console.log("  itemTexto.includes(resultado) ");
+    console.log("  itemTexto.includes(resultado) " + nomeValue);
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
    }
@@ -223,7 +224,8 @@ function mostrarResultado(mensagem, valido) {
     invalido.style = "display: none; color: black";
     item.style.color = "#A44378"; // Retorna a cor para verde
    }, 4000);
-  }
+  }*/
+  
  });
 
  if (itemJaInserido) {
