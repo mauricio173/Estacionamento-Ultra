@@ -193,9 +193,7 @@ function mostrarResultado(mensagem, valido) {
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
  console.log(nomeValue + " : " + nomes);
-if (nomeValue == nomes) {
-}
-console.log(nomes + " nomes");
+
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
    itemJaInserido = true;
