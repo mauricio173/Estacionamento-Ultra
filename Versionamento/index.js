@@ -1,18 +1,17 @@
 const btnSec = document.querySelector("#btnSec");
-  document.addEventListener("DOMContentLoaded", () => {
-    //btnSec.click();
-  });
-  
+document.addEventListener("DOMContentLoaded", () => {
+ //btnSec.click();
+});
+
 const boxSenha = document.querySelector("#offcanvasExample");
 const inputSec = document.querySelector("#inputSec");
 const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
 
-btnOkSenha.addEventListener("click",  () => {
-  if (inputSec.value == "ultra10") {
-    
-    btnClose.click();
-  }
+btnOkSenha.addEventListener("click", () => {
+ if (inputSec.value == "ultra10") {
+  btnClose.click();
+ }
 });
 
 const nome = document.querySelector("#nome");
@@ -55,12 +54,12 @@ function validarCPF() {
  // Verificar se tem 11 dígitos
  if (cpf.length !== 11) {
   mostrarResultado("CPF inválido: deve conter 11 dígitos.", false);
-   invalido.style = "display: block; color: black";
+  invalido.style = "display: block; color: black";
 
-   invalido.innerHTML = `
+  invalido.innerHTML = `
    CPF inválido: deve conter 11 dígitos.
    `;
-   
+
   setTimeout(function () {
    invalido.style = "display: none";
    cpf.value = "";
@@ -71,12 +70,12 @@ function validarCPF() {
  // Verificar se todos os dígitos são iguais (ex.: "111.111.111-11")
  if (/^(\d)\1{10}$/.test(cpf)) {
   mostrarResultado("CPF inválido: todos os dígitos são iguais.", false);
-   invalido.style = "display: block; color: black";
+  invalido.style = "display: block; color: black";
 
-   invalido.innerHTML = `
+  invalido.innerHTML = `
    CPF inválido: todos os dígitos são iguais.
    `;
-   
+
   setTimeout(function () {
    invalido.style = "display: none";
    cpf.value = "";
@@ -89,10 +88,10 @@ function validarCPF() {
   mostrarResultado("CPF inválido: dígitos verificadores incorretos.", false);
   invalido.style = "display: block; color: black";
 
-   invalido.innerHTML = `
+  invalido.innerHTML = `
    CPF inválido: dígitos verificadores incorretos.
    `;
-   
+
   setTimeout(function () {
    invalido.style = "display: none";
    cpf.value = "";
@@ -130,84 +129,86 @@ const texArea = document.querySelector("#texArea");
 nome.value = "Maurício Marques";
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
- 
+
  const cpfValue = cpf.value.replace(/\D/g, "");
- const nomeValue = nome.value.toUpperCase()
-   .normalize("NFD")
-   .replace(/[\u0300-\u036f]/g, "").trim();
+ const nomeValue = nome.value
+  .toUpperCase()
+  .normalize("NFD")
+  .replace(/[\u0300-\u036f]/g, "")
+  .trim();
  const dataInicioValue = dataInicio.value;
  const dataFinalValue = dataFinal.value;
- 
+
  let registro = {
-   cpf: cpfValue,
-   nome: nomeValue.normalize("NFD")
+  cpf: cpfValue,
+  nome: nomeValue
+   .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "")
    .trim(),
-   inicio: dataInicioValue,
-   fim: dataFinalValue
+  inicio: dataInicioValue,
+  fim: dataFinalValue
  };
- 
+
  let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
 
-// console.log(registro);
-// console.log(cad);
+ // console.log(registro);
+ // console.log(cad);
 
  const texto = `${cpfValue};${nomeValue};${dataInicioValue};${dataFinalValue};1;${cpfValue}`;
- 
- if (nomeValue.trim() == "" || nomeValue.startsWith(" ")) {
-   invalido.style = "display: block; color: black";
 
-   invalido.innerHTML = `
+ if (nomeValue.trim() == "" || nomeValue.startsWith(" ")) {
+  invalido.style = "display: block; color: black";
+
+  invalido.innerHTML = `
    Nome Vazio!
    `;
-   
-   nome.value = "";
+
+  nome.value = "";
   setTimeout(function () {
    invalido.style = "display: none";
   }, 4000);
-   return;
+  return;
  }
 
  // Verifica se o CPF ou o nome já existem na lista
  const itens = cadastros.querySelectorAll("p");
  let itemJaInserido = false;
- 
 
  itens.forEach(item => {
   const itemTexto = item.textContent
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
-// console.log(itemTexto);
- 
- const startIndex = 12; // Índice inicial para percorrer
-const substring = itemTexto.slice(startIndex); // Pega a substring a partir do índice 12
-const endIndex = substring.indexOf(";"); // Encontra a posição do próximo ";"
+  // console.log(itemTexto);
 
-// Captura o texto até o próximo ";"
-const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
+  const startIndex = 12; // Índice inicial para percorrer
+  const substring = itemTexto.slice(startIndex); // Pega a substring a partir do índice 12
+  const endIndex = substring.indexOf(";"); // Encontra a posição do próximo ";"
 
-if (nomeValue == resultado) {
+  // Captura o texto até o próximo ";"
+  const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
 
-valido = false;
-console.log("nomeValue == resultado: ", resultado);
-} else if (nomeValue !== resultado) {
-  valido = true;
-console.log("!nomeValue == resultado: ", resultado);
-} 
-  const nomes = nomeValue.toUpperCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
-// console.log(nomeValue + " : " + nomes);
-
+  if (nomeValue == resultado) {
+   valido = false;
+   console.log("nomeValue == resultado: ", resultado);
+  } else if (nomeValue !== resultado) {
+   valido = true;
+   console.log("!nomeValue == resultado: ", resultado);
+  }
+  const nomes = nomeValue
+   .toUpperCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "");
+  // console.log(nomeValue + " : " + nomes);
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
-   console.log();
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
    }
-   
+
    if (itemTexto.includes(nomes)) {
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
@@ -220,8 +221,6 @@ console.log("!nomeValue == resultado: ", resultado);
  });
 
  if (itemJaInserido) {
-
-
   setTimeout(function () {
    invalido.style = "display: none";
   }, 4000);
@@ -232,7 +231,7 @@ console.log("!nomeValue == resultado: ", resultado);
 
  // Adiciona um novo CPF válido na lista
  if (valido && nome.value.trim() !== "") {
-   const nomeCad = nome.value
+  const nomeCad = nome.value
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
@@ -242,7 +241,7 @@ console.log("!nomeValue == resultado: ", resultado);
    .replace(/[\u0300-\u036f]/g, "")
    .trim();
   el.style.color = "#A44378"; // roxo CPF válido
-  
+
   invalido.style = "visibility: visible; font-size: 10px; color: #28abab"; // verde
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
@@ -371,4 +370,3 @@ document.querySelector("#cadastros").addEventListener("click", event => {
    });
  }
 });
-
