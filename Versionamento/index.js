@@ -154,7 +154,7 @@ function verificar() {
 
  let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
  
- console.log(cadastrado);
+ console.log(cadastrado.innerText);
 }
 
 function mostrarResultado(mensagem, valido) {
@@ -208,7 +208,8 @@ function mostrarResultado(mensagem, valido) {
   const itemTexto = item.textContent
    .toUpperCase()
    .normalize("NFD")
-   .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
+   .replace(/[\u0300-\u036f]/g, ""); 
+   // Remove acentos e converte para maiúsculas
   // console.log(itemTexto);
 
   const startIndex = 12; // Índice inicial para percorrer
@@ -233,10 +234,10 @@ console.log(resultados);
    
      invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
-   console.log("nomeValue == resultado: ", resultado);
+  // console.log("nomeValue == resultado: ", resultado);
   } else if (nomeValue !== resultado) {
    
-   console.log("!nomeValue == resultado: ", resultado);
+  // console.log("!nomeValue == resultado: ", resultado);
   }
 
   if (cpfValue == resultados) {
