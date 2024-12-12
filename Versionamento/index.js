@@ -20,6 +20,7 @@ const dataInicio = document.querySelector("#dataInicio");
 const dataFinal = document.querySelector("#dataFinal");
 const cadastrar = document.querySelector("#cadastrar");
 const btnEnviar = document.querySelector("#btnEnviar");
+const btnClear = document.querySelector("#btnClear");
 const invalido = document.querySelector("#invalido");
 const lista = document.querySelector(".lista");
 const hoje = new Date();
@@ -44,6 +45,14 @@ dataFinal.value = formatarData(dataFutura);
 btnEnviar.addEventListener("click", event => {
  event.preventDefault();
  validarCPF();
+// verificar();
+});
+btnClear.addEventListener("click", event => {
+ event.preventDefault();
+ const cadastros = document.querySelector("#cadastros");
+ cadastros.innerHTML = `
+ 
+ `;
 // verificar();
 });
 
