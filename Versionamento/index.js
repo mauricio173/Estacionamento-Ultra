@@ -379,7 +379,8 @@ function mostrarResultado(mensagem, valido) {
 
     // Extrai o nome e CPF de cada item da lista
     const [cpfItem, nomeItem] = itemTexto.split(";");
-
+console.log(cpfItem);
+console.log(nomeItem);
     // Verifica duplicidade por CPF ou Nome
     if (cpfItem === cpfValue) {
       itemJaInserido = true;
