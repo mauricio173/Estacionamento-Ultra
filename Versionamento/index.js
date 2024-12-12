@@ -151,6 +151,8 @@ function verificar() {
  };
 
  let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
+ 
+ console.log(cadastro.innerText);
 }
 
 function mostrarResultado(mensagem, valido) {
