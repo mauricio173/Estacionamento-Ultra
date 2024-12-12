@@ -132,7 +132,9 @@ function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
  
  const cpfValue = cpf.value.replace(/\D/g, "");
- const nomeValue = nome.value.toUpperCase().trim();
+ const nomeValue = nome.value.toUpperCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "").trim();
  const dataInicioValue = dataInicio.value;
  const dataFinalValue = dataFinal.value;
  
