@@ -190,6 +190,7 @@ function mostrarResultado(mensagem, valido) {
 
   if (nomeValue == resultado) {
    valido = false;
+   itemJaInserido = true;
    console.log("nomeValue == resultado: ", resultado);
   } else if (nomeValue !== resultado) {
    valido = true;
