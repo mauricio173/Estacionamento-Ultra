@@ -188,8 +188,10 @@ const endIndex = substring.indexOf(";"); // Encontra a posição do próximo ";"
 const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
 
 if (nomeValue == resultado) {
+
 valido = false;
 console.log("nomeValue == resultado: ", resultado);
+return;
 }
 else if (nomeValue !== resultado) {
   valido = true;
@@ -200,6 +202,7 @@ console.log("!nomeValue == resultado: ", resultado);
 
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
+   console.log();
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
