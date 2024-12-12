@@ -159,7 +159,7 @@ function verificar() {
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
 
- const cpfValue = cpf.value.replace(/\D/g, "").trim();
+ const cpfValue = cpf.value.replace(/\D/g, "");
  const nomeValue = nome.value
   .toUpperCase()
   .normalize("NFD")
