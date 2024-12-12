@@ -153,7 +153,7 @@ function verificar() {
 
  let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
  
- console.log(cadastrado.innerText);
+ console.log(cadastrado.textContent);
 }
 
 function mostrarResultado(mensagem, valido) {
