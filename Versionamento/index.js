@@ -127,7 +127,7 @@ function validarDigitosVerificadores(cpf) {
 }
 
 const texArea = document.querySelector("#texArea");
-
+nome.value = "Maurício Marques";
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
  
