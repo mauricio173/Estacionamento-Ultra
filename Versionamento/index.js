@@ -190,7 +190,7 @@ const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
 if (nomeValue == resultado) {
 console.log("nomeValue == resultado: ", resultado);
 } else {
-console.log("Resultado:", resultado);
+console.log("!nomeValue == resultado: ", resultado);
   
 }
  
