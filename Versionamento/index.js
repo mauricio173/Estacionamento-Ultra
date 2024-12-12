@@ -239,13 +239,7 @@ console.log(nomes + " nomes");
    .replace(/[\u0300-\u036f]/g, "")
    .trim();
   el.style.color = "#A44378"; // roxo CPF válido
-  console.log(el);
-if (nomeCad == el) {
-  console.log("iguais");
-}
-if (!nomeCad == el) {
-  console.log("diferente");
-}
+  
   invalido.style = "visibility: visible; font-size: 10px; color: #28abab"; // verde
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
