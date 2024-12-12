@@ -514,6 +514,9 @@ document.querySelector("#cadastros").addEventListener("click", event => {
   const textoCompleto = todosElementos.map(el => el.innerText).join("\n");
 
   todosElementos.forEach((item, index) => {
+    lista.innerHTML = `
+    ${item.innerText}
+    `;
    console.log(item.innerText);
   });
 
@@ -522,9 +525,9 @@ document.querySelector("#cadastros").addEventListener("click", event => {
    .then(() => {
     invalido.style = "visibility: visible; font-size: 10px; color: #28abab";
     invalido.innerHTML = "Itens copiados com sucesso!";
-    lista.innerHTML = `
-    ${textoCompleto}
-    `;
+    // lista.innerHTML = `
+//     ${textoCompleto}
+//     `;
     setTimeout(function () {
      invalido.style = "visibility: hidden";
     }, 5000);
