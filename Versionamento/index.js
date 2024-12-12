@@ -523,7 +523,7 @@ document.querySelector("#cadastros").addEventListener("click", event => {
     invalido.style = "visibility: visible; font-size: 10px; color: #28abab";
     invalido.innerHTML = "Itens copiados com sucesso!";
     lista.innerHTML = `
-    ${textoCompleto.join("\n")}
+    ${textoCompleto}
     `;
     setTimeout(function () {
      invalido.style = "visibility: hidden";
