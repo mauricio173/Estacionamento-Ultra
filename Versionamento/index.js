@@ -239,14 +239,12 @@ console.log(resultados);
   }
 
   if (cpfValue == resultados) {
-   valido = false;
-   itemJaInserido = true;
+   
      invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
    console.log("CPF == resultados: ", resultados);
   } else if (cpfValue !== resultados) {
-   valido = true;
-   itemJaInserido = false;
+   
    console.log("!cpfValue == resultados: ", resultados);
   }
  
