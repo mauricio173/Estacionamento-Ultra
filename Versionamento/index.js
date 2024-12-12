@@ -237,6 +237,7 @@ console.log(nomes + " nomes");
    .replace(/[\u0300-\u036f]/g, "")
    .trim();
   el.style.color = "#A44378"; // roxo CPF válido
+  console.log(el);
 if (nomeCad == el) {
   console.log("iguais");
 }
