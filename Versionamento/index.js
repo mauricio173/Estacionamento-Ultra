@@ -309,7 +309,7 @@ console.log(resultados);
   cadastros.appendChild(el);
 
   nome.value = "Maurício Marques"; // Limpa o campo nome
-  cpf.value = "02178203085"; // Limpa o campo CPF
+  cpf.value = "02175203085"; // Limpa o campo CPF
  }
 
  // Exibe mensagem de CPF inválido
