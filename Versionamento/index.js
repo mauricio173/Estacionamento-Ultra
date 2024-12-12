@@ -193,7 +193,7 @@ function mostrarResultado(mensagem, valido) {
    console.log("nomeValue == resultado: ", resultado);
   } else if (nomeValue !== resultado) {
    valido = true;
-   
+   itemJaInserido = false;
    console.log("!nomeValue == resultado: ", resultado);
   }
  
