@@ -188,7 +188,10 @@ console.log(cad);
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, ""); // Remove acentos e converte para maiúsculas
-  
+  const nomes = nomeValue
+   .toUpperCase()
+   .normalize("NFD")
+   .replace(/[\u0300-\u036f]/g, "");
 
 console.log(nomes + " nomes");
 
@@ -224,7 +227,7 @@ console.log(nomes + " nomes");
 
  // Adiciona um novo CPF válido na lista
  if (valido && nome.value.trim() !== "") {
-  const nomeCad = nomeValue
+   const nomeCad = nomeValue
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
@@ -235,10 +238,10 @@ console.log(nomes + " nomes");
    .trim();
   el.style.color = "#A44378"; // roxo CPF válido
 if (nomeCad == el) {
-  console.log("nomeCad igual");
+  console.log("iguais");
 }
 if (!nomeCad == el) {
-  console.log("nomeCad diferente");
+  console.log("diferente");
 }
   invalido.style = "visibility: visible; font-size: 10px; color: #28abab"; // verde
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
