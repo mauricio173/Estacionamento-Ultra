@@ -189,11 +189,11 @@ const resultado = endIndex !== -1 ? substring.slice(0, endIndex) : substring;
 
 if (nomeValue == resultado) {
 console.log("nomeValue == resultado: ", resultado);
-} else {
-console.log("!nomeValue == resultado: ", resultado);
-  
 }
- 
+if (nomeValue !== resultado) {
+  
+console.log("!nomeValue == resultado: ", resultado);
+} 
   const nomes = nomeValue
    .toUpperCase()
    .normalize("NFD")
