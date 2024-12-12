@@ -157,6 +157,8 @@ function verificar() {
  console.log(cadastrado);
 }
 
+ nome.value = "Maurício Marques"; // Limpa o campo nome
+  cpf.value = "02175203085"; // Limpa o campo CPF
 function mostrarResultado(mensagem, valido) {
  const cadastros = document.querySelector("#cadastros");
 
