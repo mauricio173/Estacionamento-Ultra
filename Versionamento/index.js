@@ -194,10 +194,7 @@ function mostrarResultado(mensagem, valido) {
   } else if (nomeValue !== resultado) {
    valido = true;
    const el = document.createElement("p");
-  el.innerHTML = texto
-   .normalize("NFD")
-   .replace(/[\u0300-\u036f]/g, "")
-   .trim();
+  el.innerHTML = texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").trim();
   el.style.color = "#A44378"; // roxo CPF válido
 
   invalido.style = "visibility: visible; font-size: 10px; color: #28abab"; // verde
