@@ -510,7 +510,7 @@ document.querySelector("#cadastros").addEventListener("click", event => {
    .writeText(textoCompleto)
    .then(() => {
     invalido.style = "visibility: visible; font-size: 10px; color: #28abab";
-    invalido.innerHTML = "CPF cadastrado com sucesso";
+    invalido.innerHTML = "Itens copiados com sucesso!";
     setTimeout(function () {
      invalido.style = "visibility: hidden";
     }, 4000);
