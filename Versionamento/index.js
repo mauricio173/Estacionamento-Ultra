@@ -129,7 +129,7 @@ const texArea = document.querySelector("#texArea");
 
 function verificar() {
   const cadastros = document.querySelector("#cadastros");
-  const cadastro = document.querySelectorAll("#cadastros p");
+  const cadastrado = document.querySelectorAll("#cadastros p");
   
   const cpfValue = cpf.value.replace(/\D/g, "");
  const nomeValue = nome.value
@@ -152,7 +152,7 @@ function verificar() {
 
  let cad = `${registro.cpf};${registro.nome};${registro.inicio};${registro.fim};1;${registro.cpf}`;
  
- console.log(cadastro.innerText);
+ console.log(cadastrado.innerText);
 }
 
 function mostrarResultado(mensagem, valido) {
