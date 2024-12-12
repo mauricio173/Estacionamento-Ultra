@@ -204,7 +204,7 @@ function mostrarResultado(mensagem, valido) {
   invalido.innerHTML = "CPF e nome cadastrados com sucesso!";
   setTimeout(function () {
    invalido.style = "visibility: hidden;";
-  }, 3500);
+  }, 3000);
 
   cadastros.appendChild(el);
    console.log("!nomeValue == resultado: ", resultado);
