@@ -227,7 +227,7 @@ console.log(nomes + " nomes");
 
  // Adiciona um novo CPF válido na lista
  if (valido && nome.value.trim() !== "") {
-   const nomeCad = nomeValue
+   const nomeCad = nome.value
    .toUpperCase()
    .normalize("NFD")
    .replace(/[\u0300-\u036f]/g, "");
