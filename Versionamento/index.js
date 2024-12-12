@@ -215,7 +215,7 @@ function mostrarResultado(mensagem, valido) {
 
    if (resultado.includes(nomeValue)) {
      console.log(nomeValue);
-    console.log("  itemTexto.includes(nomeValue) ");
+    console.log("  resultado.includes(nomeValue) ");
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
    }
