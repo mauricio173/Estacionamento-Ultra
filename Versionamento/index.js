@@ -204,15 +204,16 @@ function mostrarResultado(mensagem, valido) {
   // console.log(nomeValue + " : " + nomes);
 
   if (itemTexto.includes(cpfValue) || itemTexto.includes(nomes)) {
-    console.log(" itemTexto.includes(cpfValue) || itemTexto.includes(nomes) ");
    itemJaInserido = true;
    item.style.color = "#28abab"; // Muda a cor para preto temporariamente
    if (itemTexto.includes(cpfValue)) {
+    console.log(" itemTexto.includes(cpfValue) ");
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "CPF já inserido.";
    }
 
    if (itemTexto.includes(nomes)) {
+    console.log("  itemTexto.includes(nomes) ");
     invalido.style = "display: block; color: black";
     invalido.innerHTML = "Nome já inserido.";
    }
