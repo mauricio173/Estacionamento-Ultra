@@ -29,7 +29,7 @@ const btnClose = document.querySelector(".btn-close");
  childs();
 
 btnOkSenha.addEventListener("click", () => {
-   childs();
+  
   const inputSec = document.querySelector("#inputSec").value;
   const dropPassword = document.querySelector(".dropPassword");
  const h6 = document.createElement("h6");
@@ -51,6 +51,7 @@ btnOkSenha.addEventListener("click", () => {
    
    setTimeout(function() {
    //h6.innerText = "";
+    childs();
      return;
    }, 5000);
    
