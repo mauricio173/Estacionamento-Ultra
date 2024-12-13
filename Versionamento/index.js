@@ -14,14 +14,14 @@ btnOkSenha.addEventListener("click", () => {
  const h6 = document.createElement("h6");
  console.log(inputSec);
  if (inputSec == "ultra10") {
-   h6.innerText = "Senha correta!";
+   h6.innerHTML = "Senha correta!";
    setTimeout(function() {
     btnClose.click();
    h6.innerText = "";
      
    }, 5000);
  } else {
-   h6.innerText = "Senha incorreta!";
+   h6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
    h6.innerText = "";
