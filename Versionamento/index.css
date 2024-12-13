@@ -238,7 +238,7 @@ hr {
 
 .boxBtn .submit-btn:nth-child(1) {
   background-color: var(--verde);
-  box-shadow: 1px 1px var(--verde);
+  box-shadow: 1px 1px var(--roxo);
 }
 
 
