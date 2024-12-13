@@ -138,20 +138,7 @@ align-items: center;
  
   width: 50%;
  }
- /* .marca {
-    position: absolute;
-  top: 60%;
-  left: 50%;
-  transform: translate(-50%, -50%);
- } */
- .dropPassword div input {
-  width: 60%;
-  
-}
- .dropPassword div input:nth-child(2) {
-  width: 20%;
-  
-}
+ 
 } 
 
  @media screen and (max-width: 800px) {
