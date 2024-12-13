@@ -12,15 +12,15 @@ btnOkSenha.addEventListener("click", () => {
   const inputSec = document.querySelector("#inputSec").value;
   const dropPassword = document.querySelector(".dropPassword");
  const h6 = document.createElement("h6");
-  const dropPasswordH6 = document.querySelector(".dropPassword h6");
+  const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
  const childs = () => {
    console.log(dropPassword.children.length);
    
-   if (dropPassword.children.length > 1) {
-   while (dropPassword.firstChild) {
-   dropPassword.removeChild(dropPassword.firstChild);
-     }
-   } 
+  // if (dropPassword.children.length > 1) {
+  // while (dropPassword.firstChild) {
+  // dropPassword.removeChild(dropPassword.firstChild);
+  //   }
+  // } 
  };
  childs();
  console.log(inputSec);
