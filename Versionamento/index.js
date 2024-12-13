@@ -38,7 +38,7 @@ btnOkSenha.addEventListener("click", () => {
   const inputSec = document.querySelector("#inputSec").value;
   const dropPassword = document.querySelector(".dropPassword");
  const h6 = document.createElement("h6");
- 
+ h6.classList.add("dropPasswordH6");
   // const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
   const dropPasswordH6 = dropPassword.querySelectorAll("h6");
 
