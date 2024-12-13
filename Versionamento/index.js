@@ -13,8 +13,9 @@ btnOkSenha.addEventListener("click", () => {
   const dropPassword = document.querySelector(".dropPassword");
  const h6 = document.createElement("h6");
  const childs = () => {
-   dropPassword.children.length;
+   console.log(dropPassword.children.length);
  };
+ childs();
  console.log(inputSec);
  if (inputSec == "ultra10") {
    dropPassword.prependChild(h6);
