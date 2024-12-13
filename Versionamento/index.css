@@ -221,7 +221,7 @@ hr {
  border: none;
  background-color: var(--laranja);
  color: #000000;
- padding: 0.3rem 1rem;
+ padding: 0.3rem 0.5rem;
  display: block;
  width: 50%;
  margin: 0.6rem auto;
