@@ -241,6 +241,10 @@ hr {
   background-color: var(--verde);
 }
 
+.dropPassword {
+  display: flex;
+}
+
 
 /*.submit-btn:hover {
  cursor: pointer;
