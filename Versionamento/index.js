@@ -7,10 +7,10 @@ const boxSenha = document.querySelector("#offcanvasExample");
 
 const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
-
+/*
  const dropPassword = document.querySelector(".dropPassword");
 // const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
- const dropPasswordH6 = dropPassword.querySelectorAll("h6");
+ const dropPasswordH6 = document.querySelectorAll(".dropPasswordH6");
 
  const childs = (e) => {
    console.log(dropPassword.children.length + " :dropPassword.children.length");
@@ -32,7 +32,7 @@ const btnClose = document.querySelector(".btn-close");
   // } 
  };
  childs();
-
+*/
 btnOkSenha.addEventListener("click", () => {
   
   const inputSec = document.querySelector("#inputSec").value;
@@ -40,29 +40,29 @@ btnOkSenha.addEventListener("click", () => {
  const h6 = document.createElement("h6");
  h6.classList.add("dropPasswordH6");
   // const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
-  const dropPasswordH6 = dropPassword.querySelectorAll("h6");
+ const dropPasswordH6 = document.querySelector(".dropPasswordH6");
 
  //console.log(inputSec);
  if (inputSec == "ultra10") {
-   dropPassword.prependChild(h6);
-   h6.innerHTML = "Senha correta!";
+   // dropPassword.prependChild(h6);
+   dropPasswordH6.innerHTML = "Senha correta!";
    setTimeout(function() {
     btnClose.click();
    h6.innerText = "";
      
    }, 5000);
  } else {
-   dropPassword.appendChild(h6);
-   h6.innerHTML = "Senha incorreta!";
+  // dropPassword.appendChild(h6);
+   dropPasswordH6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
-   //h6.innerText = "";
+   //dropPasswordH6.innerText = "";
      return;
    }, 5000);
    
    
  }
-    childs();
+   // childs();
 });
 
 const nome = document.querySelector("#nome");
