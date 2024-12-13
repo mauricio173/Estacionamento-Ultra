@@ -13,12 +13,12 @@ const btnClose = document.querySelector(".btn-close");
  const dropPasswordH6 = dropPassword.querySelectorAll("h6");
 
  const childs = (e) => {
-   console.log(dropPassword.children.length);
+   console.log(dropPassword.children.length + " :dropPassword.children.length");
   
-  dropPasswordH6.forEach((item, index) => {
+  // dropPasswordH6.forEach((item, index) => {
     
-   console.log(item);
-  });
+  // console.log(item);
+  // });
   
    
   // if (dropPassword.children.length > 1) {
