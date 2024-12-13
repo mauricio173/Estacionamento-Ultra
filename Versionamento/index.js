@@ -35,9 +35,10 @@ btnOkSenha.addEventListener("click", () => {
   const dropPassword = document.querySelector(".dropPassword");
  const h6 = document.createElement("h6");
  
-  const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
+  // const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
+  const dropPasswordH6 = dropPassword.querySelectorAll("h6");
 
- console.log(inputSec);
+ //console.log(inputSec);
  if (inputSec == "ultra10") {
    dropPassword.prependChild(h6);
    h6.innerHTML = "Senha correta!";
@@ -55,9 +56,9 @@ btnOkSenha.addEventListener("click", () => {
      return;
    }, 5000);
    
-    childs();
    
  }
+    childs();
 });
 
 const nome = document.querySelector("#nome");
