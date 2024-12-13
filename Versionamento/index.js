@@ -33,7 +33,6 @@ btnOkSenha.addEventListener("click", () => {
    
    
  }
-   // childs();
 });
 
 const nome = document.querySelector("#nome");
