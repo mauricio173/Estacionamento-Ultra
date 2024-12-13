@@ -48,7 +48,7 @@ btnOkSenha.addEventListener("click", () => {
    dropPasswordH6.innerHTML = "Senha correta!";
    setTimeout(function() {
     btnClose.click();
-   h6.innerText = "";
+   dropPasswordH6.innerHTML = "";
      
    }, 5000);
  } else {
