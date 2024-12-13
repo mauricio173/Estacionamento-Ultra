@@ -16,7 +16,7 @@ const btnClose = document.querySelector(".btn-close");
   
   dropPasswordH6.forEach((item, index) => {
     
-   console.log(item.textContent);
+   console.log(item);
   });
   
    
