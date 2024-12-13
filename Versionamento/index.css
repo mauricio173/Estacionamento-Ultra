@@ -220,7 +220,7 @@ hr {
 .submit-btn {
  border: none;
  background-color: var(--laranja);
- box-shadow: 2px 1px var(--roxo);
+ box-shadow: 2px 2px var(--roxo);
  color: #000000;
  padding: 0.3rem 0.5rem;
  display: block;
