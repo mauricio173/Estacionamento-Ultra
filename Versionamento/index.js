@@ -7,56 +7,27 @@ const boxSenha = document.querySelector("#offcanvasExample");
 
 const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
-/*
- const dropPassword = document.querySelector(".dropPassword");
-// const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
- const dropPasswordH6 = document.querySelectorAll(".dropPasswordH6");
 
- const childs = (e) => {
-   console.log(dropPassword.children.length + " :dropPassword.children.length");
-   console.log(dropPasswordH6.innerText);
-  // if (dropPassword.children.length > 3) {
-  //   dropPassword.removeChild(dropPassword.firstChild);
-  // }
-  
-  // dropPasswordH6.forEach((item, index) => {
-    
-  // console.log(item);
-  // });
-  
-   
-  // if (dropPassword.children.length > 1) {
-  // while (dropPassword.firstChild) {
-  // dropPassword.removeChild(dropPassword.firstChild);
-  //   }
-  // } 
- };
- childs();
-*/
 btnOkSenha.addEventListener("click", () => {
   
   const inputSec = document.querySelector("#inputSec").value;
   const dropPassword = document.querySelector(".dropPassword");
- const h6 = document.createElement("h6");
- h6.classList.add("dropPasswordH6");
-  // const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
+ 
  const dropPasswordH6 = document.querySelector(".dropPasswordH6");
 
- //console.log(inputSec);
  if (inputSec == "ultra10") {
-   // dropPassword.prependChild(h6);
    dropPasswordH6.innerHTML = "Senha correta!";
    setTimeout(function() {
     btnClose.click();
    dropPasswordH6.innerHTML = "";
      
-   }, 5000);
+   }, 800);
  } else {
   // dropPassword.appendChild(h6);
    dropPasswordH6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
-   //dropPasswordH6.innerHTML = "";
+   dropPasswordH6.innerHTML = "";
      return;
    }, 5000);
    
