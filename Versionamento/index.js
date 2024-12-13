@@ -14,11 +14,11 @@ btnOkSenha.addEventListener("click", () => {
  const h6 = document.createElement("h6");
   const dropPasswordH6 = document.querySelector(".dropPassword h6");
  const childs = () => {
-   console.log(dropPasswordH6.children.length);
+   console.log(dropPassword.children.length);
    
-   if (dropPasswordH6.children.length > 1) {
-   while (dropPasswordH6.firstChild) {
-   dropPasswordH6.removeChild(dropPasswordH6.firstChild);
+   if (dropPassword.children.length > 1) {
+   while (dropPassword.firstChild) {
+   dropPassword.removeChild(dropPassword.firstChild);
      }
    } 
  };
