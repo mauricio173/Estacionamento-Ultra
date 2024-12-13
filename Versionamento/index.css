@@ -144,9 +144,13 @@ align-items: center;
   left: 50%;
   transform: translate(-50%, -50%);
  } */
- .dropPassword div {
+ .dropPassword div input {
+  width: 60%;
   
-  flex: 1 1 70%;
+}
+ .dropPassword div input:nth-child(2) {
+  width: 60%;
+  
 }
 } 
 
