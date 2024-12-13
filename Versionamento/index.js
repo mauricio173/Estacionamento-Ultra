@@ -10,10 +10,25 @@ const btnClose = document.querySelector(".btn-close");
 
 btnOkSenha.addEventListener("click", () => {
   const inputSec = document.querySelector("#inputSec").value;
-  
- if (inputSec == "ultra10") {
+  const dropPassword = document.querySelector(".dropPassword");
+ const h6 = document.createElement("h6");
  console.log(inputSec);
-  btnClose.click();
+ if (inputSec == "ultra10") {
+   h6.innerText = "Senha correta!";
+   setTimeout(function() {
+    btnClose.click();
+   h6.innerText = "";
+     
+   }, 5000);
+ } else {
+   h6.innerText = "Senha incorreta!";
+   
+   setTimeout(function() {
+   h6.innerText = "";
+     return;
+   }, 5000);
+   
+   
  }
 });
 
