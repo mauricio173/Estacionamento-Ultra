@@ -11,7 +11,7 @@ const btnClose = document.querySelector(".btn-close");
 btnOkSenha.addEventListener("click", () => {
   const inputSec = document.querySelector("#inputSec").value;
   
- if (inputSec.value == "ultra10") {
+ if (inputSec == "ultra10") {
  console.log(inputSec);
   btnClose.click();
  }
