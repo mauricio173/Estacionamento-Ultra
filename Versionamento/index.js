@@ -4,11 +4,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 const boxSenha = document.querySelector("#offcanvasExample");
-const inputSec = document.querySelector("#inputSec").value;
+
 const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
 
 btnOkSenha.addEventListener("click", () => {
+  const inputSec = document.querySelector("#inputSec").value;
  if (inputSec.value == "ultra10") {
   btnClose.click();
  }
