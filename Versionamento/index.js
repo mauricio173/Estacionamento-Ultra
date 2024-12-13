@@ -8,12 +8,6 @@ const boxSenha = document.querySelector("#offcanvasExample");
 const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
 
-btnOkSenha.addEventListener("click", () => {
-  const inputSec = document.querySelector("#inputSec").value;
-  const dropPassword = document.querySelector(".dropPassword");
- const h6 = document.createElement("h6");
- 
-  const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
  const childs = () => {
    console.log(dropPassword.children.length);
    console.log(dropPasswordH6);
@@ -26,6 +20,14 @@ btnOkSenha.addEventListener("click", () => {
   // } 
  };
  childs();
+
+btnOkSenha.addEventListener("click", () => {
+  const inputSec = document.querySelector("#inputSec").value;
+  const dropPassword = document.querySelector(".dropPassword");
+ const h6 = document.createElement("h6");
+ 
+  const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
+
  console.log(inputSec);
  if (inputSec == "ultra10") {
    dropPassword.prependChild(h6);
