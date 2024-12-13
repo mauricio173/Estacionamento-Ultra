@@ -14,6 +14,12 @@ btnOkSenha.addEventListener("click", () => {
  const h6 = document.createElement("h6");
  const childs = () => {
    console.log(dropPassword.children.length);
+   
+   if (dropPassword.children.length === 1) {
+   while (dropPassword.firstChild) {
+   dropPassword.removeChild(dropPassword.firstChild);
+     }
+   } 
  };
  childs();
  console.log(inputSec);
