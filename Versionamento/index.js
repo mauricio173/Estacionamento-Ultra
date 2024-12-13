@@ -26,7 +26,7 @@ btnOkSenha.addEventListener("click", () => {
    h6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
-   h6.innerText = "";
+   //h6.innerText = "";
      return;
    }, 5000);
    
