@@ -56,7 +56,7 @@ btnOkSenha.addEventListener("click", () => {
    dropPasswordH6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
-   //dropPasswordH6.innerText = "";
+   //dropPasswordH6.innerHTML = "";
      return;
    }, 5000);
    
