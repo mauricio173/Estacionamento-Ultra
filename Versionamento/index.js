@@ -22,7 +22,7 @@ btnOkSenha.addEventListener("click", () => {
      
    }, 5000);
  } else {
-   dropPassword.prependChild(h6);
+   dropPassword.prepend(h6);
    h6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
