@@ -233,7 +233,7 @@ hr {
 .boxBtn {
   display: flex;
   flex-flow: row wrap;
-  gap: 8px;
+  margin: 8px;
 }
 
 
