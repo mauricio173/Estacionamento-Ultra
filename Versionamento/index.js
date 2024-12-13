@@ -9,6 +9,7 @@ const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
 
  const dropPassword = document.querySelector(".dropPassword");
+ const dropPasswordH6 = document.querySelector(".dropPassword h6");
 
  const childs = () => {
    console.log(dropPassword.children.length);
