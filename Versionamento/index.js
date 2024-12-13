@@ -12,9 +12,9 @@ btnOkSenha.addEventListener("click", () => {
   const inputSec = document.querySelector("#inputSec").value;
   
  if (inputSec.value == "ultra10") {
+ console.log(inputSec);
   btnClose.click();
  }
- console.log(inputSec);
 });
 
 const nome = document.querySelector("#nome");
