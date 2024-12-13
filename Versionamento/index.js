@@ -14,9 +14,9 @@ const btnClose = document.querySelector(".btn-close");
 
  const childs = (e) => {
    console.log(dropPassword.children.length + " :dropPassword.children.length");
-   
+   console.log(dropPasswordH6);
   if (dropPassword.children.length > 3) {
-    dropPassword.removeChild(dropPassword.prependChild);
+    dropPassword.removeChild(dropPassword.firstChild);
   }
   
   // dropPasswordH6.forEach((item, index) => {
