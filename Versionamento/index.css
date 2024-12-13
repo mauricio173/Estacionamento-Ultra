@@ -236,6 +236,10 @@ hr {
   margin: 0 8px;
 }
 
+.boxBtn .submit-btn:nth-child(2) {
+  background-color: var(--verde);
+}
+
 
 /*.submit-btn:hover {
  cursor: pointer;
