@@ -15,6 +15,7 @@ btnOkSenha.addEventListener("click", () => {
   const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
  const childs = () => {
    console.log(dropPassword.children.length);
+   console.log(dropPasswordH6.children.length);
    
   // if (dropPassword.children.length > 1) {
   // while (dropPassword.firstChild) {
