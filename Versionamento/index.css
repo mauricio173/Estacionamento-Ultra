@@ -144,7 +144,10 @@ align-items: center;
   left: 50%;
   transform: translate(-50%, -50%);
  } */
- 
+ .dropPassword div {
+  
+  flex: 1 1 70%;
+}
 } 
 
 .footer {
