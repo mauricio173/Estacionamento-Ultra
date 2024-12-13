@@ -245,7 +245,7 @@ hr {
 
 .dropPassword {
   display: flex;
-  width: 50%;
+  width: 100%;
   flex-flow: column wrap;
   
 }
