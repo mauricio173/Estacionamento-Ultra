@@ -14,6 +14,7 @@ btnOkSenha.addEventListener("click", () => {
  const h6 = document.createElement("h6");
  console.log(inputSec);
  if (inputSec == "ultra10") {
+   dropPassword.prependChild(h6);
    h6.innerHTML = "Senha correta!";
    setTimeout(function() {
     btnClose.click();
@@ -21,6 +22,7 @@ btnOkSenha.addEventListener("click", () => {
      
    }, 5000);
  } else {
+   dropPassword.prependChild(h6);
    h6.innerHTML = "Senha incorreta!";
    
    setTimeout(function() {
