@@ -154,6 +154,18 @@ align-items: center;
 }
 } 
 
+ @media screen and (max-width: 800px) {
+
+ .dropPassword div input {
+  width: 60%;
+  
+}
+ .dropPassword div input:nth-child(2) {
+  width: 20%;
+  
+}
+} 
+
 .footer {
  background: var(--verde);
  border-radius: 0.5rem;
