@@ -230,6 +230,13 @@ hr {
  cursor: pointer;
 }
 
+.boxBtn {
+  display: flex;
+  flex-flow: row wrap;
+  
+}
+
+
 /*.submit-btn:hover {
  cursor: pointer;
  background: rgba(0, 255, 13, 0.9);
