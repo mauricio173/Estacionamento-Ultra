@@ -52,10 +52,10 @@ btnOkSenha.addEventListener("click", () => {
    
    setTimeout(function() {
    //h6.innerText = "";
-    childs();
      return;
    }, 5000);
    
+    childs();
    
  }
 });
