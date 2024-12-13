@@ -9,11 +9,11 @@ const btnOkSenha = document.querySelector("#btnOkSenha");
 const btnClose = document.querySelector(".btn-close");
 
  const dropPassword = document.querySelector(".dropPassword");
- const dropPasswordH6 = document.querySelector(".dropPassword h6");
+ const dropPasswordH6 = document.querySelectorAll(".dropPassword h6");
 
- const childs = () => {
+ const childs = (e) => {
    console.log(dropPassword.children.length);
-   console.log(dropPasswordH6.children.length);
+   console.log(dropPasswordH6);
   
    
   // if (dropPassword.children.length > 1) {
