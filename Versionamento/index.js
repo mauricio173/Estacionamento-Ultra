@@ -17,7 +17,7 @@ btnOkSenha.addEventListener("click", () => {
 
  if (inputSec == "ultra10") {
    dropPasswordH6.innerHTML = "Senha correta!";
-   dropPasswordH6.style.color="var(--verde)"
+   dropPasswordH6.style.color="var(--verde)";
    setTimeout(function() {
     btnClose.click();
    dropPasswordH6.innerHTML = "";
