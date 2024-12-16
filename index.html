@@ -11,22 +11,73 @@
   />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+
   <link rel="stylesheet" href="index.css" type="text/css" />
   <script src="index.js" type="text/javascript" charset="utf-8" defer></script>
-  <title>Ultra Estacionamento - Maurício Marques</title>
+  <title>Ultra Estacionamento v2 - Maurício Marques</title>
  </head>
  <body>
+<!--  <div class="boxSec">
+   <div class="containerSec">
+    <label class="" for="appSec">
+     <p>Senha</p>
+     <input type="text" name="appSec" id="appSec" placeholder="Digite a senha!" />
+    </label>
+   </div>
+  </div>-->
+<span>
+<a id="btnSec" style="" class="btn btn-primary d-none" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+  Link with href
+</a>
+
+
+<div class="offcanvas offcanvas-start show" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Verificação de Segurança</h5>
+    <button style="visibility: hidden" type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <!--<div>
+      Some text as placeholder. In real life you can have the elements you have chosen. Like, text, images, lists, etc.
+    </div>-->
+    <div class="dropdown mt-3">
+      <h2>Senha de Segurança</h2>
+      <div class="dropPassword">
+      <div>
+        
+      
+      <input type="password" name="inputSec" id="inputSec" style=""
+      value="ultra10"
+      placeholder="Digite a senha!" />
+      <input type="button" name="btnOkSenha" id="btnOkSenha"
+       style=""
+      value="Enviar" />
+      </div>
+        <h6 class="dropPasswordH6"></h6>
+     </div>
+    </div>
+  </div>
+</div>
+<script>
+  const myOffcanvas = document.getElementById('btnSec')
+myOffcanvas.addEventListener('hidden.bs.offcanvas', event => {
+  //btnSec.show();
+  // do something...
+})
+  
+  classSelector.addEventListener("onload", functionName);
+  
+</script>
+</span>
   <header class="header">
-    <nav class="">
-      <ul class="">
-        <li><a href="./Versionamento/index.html"  target="_self">
-          Estacionamento 
-        </a></li>
-        <li><a href="./Tarefas/index.html"  target="_self">
-          Tarefas
-        </a></li>
-      </ul>
-    </nav>
+   <nav class="">
+    <ul class="">
+     <li><a href="https://mauricio173.github.io/Estacionamento-Ultra" target="_self"> Início </a></li>
+     <li><a href="index.html" target="_self"> Estacionamento </a></li>
+     <li><a href="https://mauricio173.github.io/tarefa/" target="_self"> Tarefa </a></li>
+     <li><a href="https://mauricio173.github.io/Tarefas/index.html" target="_self" disabled> Tarefas </a></li>
+    </ul>
+   </nav>
   </header>
 
   <main class="main">
@@ -42,15 +93,23 @@
          <p>Nome Completo</p>
          <input type="text" name="nome" id="nome" placeholder="Informe o nome" />
         </label>
+       </div>
+       <div class="three-details-item">
         <label for="cpf">
          <p>CPF</p>
-         <input type="text" name="cpf" id="cpf" placeholder="Digite o CPF" maxlength="14" list="cpfList" />
+         <input type="number" name="cpf" id="cpf" placeholder="Digite o CPF" maxlength="14" list="cpfList" />
          <datalist id="cpfList">
-          <option value="021.752.030-85"></option>
           <option value="02175203085"></option>
-          <option value="    02175203085"></option>
-          <option value="12345678900"></option>
-          <option value="12312312312"></option>
+
+          <option value="03312991196"></option>
+          <option value="93603835034"></option>
+          <option value="86569929020"></option>
+          <option value="00997902035"></option>
+          <option value="01048137090"></option>
+          <option value="72779330015"></option>
+          <option value="11111111111"></option>
+          <option value="12345678901"></option>
+          <option value="123456789"></option>
          </datalist>
         </label>
        </div>
@@ -66,8 +125,7 @@
         </label>
        </div>
       </section>
-      <br />
-      
+      <p id="invalido" style="display: flex; visibility: hidden"></p>
 
       <hr />
 
@@ -76,27 +134,29 @@
       <h4>Outros Detalhes</h4>
       <section class="identity-details">
        <div class="three-details-item">
-        <p id="cadastros"></p>
+        <span id="cadastros"> </span>
        </div>
-
       </section>
+      <div class="boxBtn">
+        
+     
       <button id="btnEnviar" class="submit-btn">Enviar</button>
+      <button id="btnClear" class="submit-btn">Limpar</button>
+       </div>
      </form>
     </section>
    </section>
 
-
-   <section class=""></section>
+   <section class="container-fluid lista">
+     
+   </section>
   </main>
 
-  <footer class="footer">
-  </footer>
-           <div
-        style="display: flex; align-items: center; justify-content: flex-start; font-size: 18px; text-align: center; flex-flow: row wrap; margin: 0.1rem 1rem 0.1rem;"
-       >
-        <p style="font-size: 12px; margin-right: 2px">Maurício Marques</p>
-        <p style="display: flex; align-items: center; justify-content: flex-start; text-align: center; flex-flow: row wrap; padding-top: 7px">®</p>
-       </div>
+  <footer class="footer"></footer>
+  <div class="marca" style="">
+   <p style="font-size: 12px; margin-right: 2px">Maurício Marques</p>
+   <p style="">®</p>
+  </div>
 
   <script
    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
@@ -105,4 +165,5 @@
   ></script>
   <script src="https://cdn.jsdelivr.net/npm/eruda" onload="eruda.init()"></script>
  </body>
-</html>
+ </html>
+ 
